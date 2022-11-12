@@ -25,11 +25,13 @@ module testbench();
     logic [31:0] k0, k1;
     assign k0 = d0.k0;
     assign k1 = d0.k1;
-    // assign gOut0 = d0.kb0.gOut0;
-    // assign gOut1 = d0.kb0.gOut1;
+    logic [31:0] gOut0, gOut1;
+    assign gOut0 = d0.kb0.gOut0;
+    assign gOut1 = d0.kb0.gOut1;
 
-    // logic [31:0] sBoxOut;
-    // assign sBoxOut = d0.kb0.g0.sBoxOut;
+    logic [31:0] sBoxOut0, sBoxOut1;
+    assign sBoxOut0 = d0.kb0.g0.sBoxOut;
+    assign sBoxOut1 = d0.kb0.g1.sBoxOut;
 
     // logic [7:0] a3;
     // assign a3 = d0.kb0.g0.sb0.sb0.a3;
@@ -97,4 +99,17 @@ module testbench();
     // initial begin: TEST
     //     i = 4'hE;
     // end
+
+    // logic [7:0] in_5b, out_5b;
+    // test m5b0 (.*);
+
+    // initial begin: TEST
+    //     in_5b = 8'h3D;
+
+    // #2  in_5b = 8'h1F;
+
+    // #2  in_5b = 8'hDE;
+
+    // end
+
 endmodule
