@@ -1,4 +1,4 @@
-module genSKey
+module sKey
 (
     input logic [127:0] m,
     output logic [31:0] s0, s1

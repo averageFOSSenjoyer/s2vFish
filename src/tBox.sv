@@ -4,7 +4,7 @@ module tBox #(parameter q = 0, parameter t = 0)
     output logic [3:0] o
 );
 
-    parameter [127:0] [3:0] ROM = {
+    parameter [0:127] [3:0] ROM = {
         4'h8, 4'h1, 4'h7, 4'hD, 4'h6, 4'hF, 4'h3, 4'h2, 4'h0, 4'hB, 4'h5, 4'h9, 4'hE, 4'hC, 4'hA, 4'h4,
         4'hE, 4'hC, 4'hB, 4'h8, 4'h1, 4'h2, 4'h3, 4'h5, 4'hF, 4'h4, 4'hA, 4'h6, 4'h7, 4'h0, 4'h9, 4'hD,
         4'hB, 4'hA, 4'h5, 4'hE, 4'h6, 4'hD, 4'h9, 4'h0, 4'hC, 4'h8, 4'hF, 4'h3, 4'h2, 4'h4, 4'h7, 4'h1,
@@ -15,7 +15,7 @@ module tBox #(parameter q = 0, parameter t = 0)
         4'hB, 4'h9, 4'h5, 4'h1, 4'hC, 4'h3, 4'hD, 4'hE, 4'h6, 4'h4, 4'h7, 4'hF, 4'h2, 4'h0, 4'h8, 4'hA
     };
 
-    assign o = ROM[i + t << 4 + q << 6];
+    assign o = ROM[i + (t << 4) + (q << 6)];
 
 endmodule
 

@@ -11,7 +11,7 @@ module funF
 
     pht pht0 (.a(gOut0), .b(gOut1), .ao(phtOut0), .bo(phtOut1));
 
-    assign ao = phtOut0 ^ k0;
-    assign bo = phtOut1 ^ k1;
+    assign ao = phtOut0 + k0;
+    assign bo = phtOut1 + k1;
 
 endmodule
