@@ -1,5 +1,5 @@
 Analysis & Synthesis report for s2vFish
-Sat Nov 12 12:00:49 2022
+Sat Nov 12 22:40:15 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -326,6 +326,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 318. Post-Synthesis Netlist Statistics for Top Partition
 319. Elapsed Time Per Partition
 320. Analysis & Synthesis Messages
+321. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -351,13 +352,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 12 12:00:49 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 12 22:40:15 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; s2vFish                                     ;
 ; Top-level Entity Name              ; datapath                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,471                                       ;
-;     Total combinational functions  ; 3,343                                       ;
+; Total logic elements               ; 3,507                                       ;
+;     Total combinational functions  ; 3,379                                       ;
 ;     Dedicated logic registers      ; 269                                         ;
 ; Total registers                    ; 269                                         ;
 ; Total pins                         ; 389                                         ;
@@ -473,7 +474,7 @@ refer to the applicable agreement for further details.
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 ;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
+;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
@@ -532,17 +533,17 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,471     ;
+; Estimated Total logic elements              ; 3,507     ;
 ;                                             ;           ;
-; Total combinational functions               ; 3343      ;
+; Total combinational functions               ; 3379      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1714      ;
-;     -- 3 input functions                    ; 878       ;
-;     -- <=2 input functions                  ; 751       ;
+;     -- 4 input functions                    ; 1712      ;
+;     -- 3 input functions                    ; 920       ;
+;     -- <=2 input functions                  ; 747       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2679      ;
-;     -- arithmetic mode                      ; 664       ;
+;     -- normal mode                          ; 2709      ;
+;     -- arithmetic mode                      ; 670       ;
 ;                                             ;           ;
 ; Total registers                             ; 269       ;
 ;     -- Dedicated logic registers            ; 269       ;
@@ -554,8 +555,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 269       ;
-; Total fan-out                               ; 12318     ;
-; Average fan-out                             ; 2.81      ;
+; Total fan-out                               ; 12543     ;
+; Average fan-out                             ; 2.83      ;
 +---------------------------------------------+-----------+
 
 
@@ -564,14 +565,14 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                   ; Entity Name ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-------------+--------------+
-; |datapath                                      ; 3343 (548)          ; 269 (269)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 389  ; 0            ; 0          ; |datapath                                                                                                             ; datapath    ; work         ;
-;    |funF:ff0|                                  ; 1071 (64)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0                                                                                                    ; funF        ; work         ;
+; |datapath                                      ; 3379 (581)          ; 269 (269)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 389  ; 0            ; 0          ; |datapath                                                                                                             ; datapath    ; work         ;
+;    |funF:ff0|                                  ; 1072 (64)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0                                                                                                    ; funF        ; work         ;
 ;       |funG:g0|                                ; 473 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0                                                                                            ; funG        ; work         ;
-;          |mds:mds0|                            ; 89 (71)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0                                                                                   ; mds         ; work         ;
+;          |mds:mds0|                            ; 89 (70)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0                                                                                   ; mds         ; work         ;
 ;             |mul5B:y35|                        ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mul5B:y35                                                                         ; mul5B       ; work         ;
 ;             |mulEF:y0E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mulEF:y0E                                                                         ; mulEF       ; work         ;
 ;             |mulEF:y1E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mulEF:y1E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y2E|                        ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
+;             |mulEF:y2E|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
 ;          |sBox:sb0|                            ; 384 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0                                                                                   ; sBox        ; work         ;
 ;             |ssBox:sb0|                        ; 96 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
@@ -637,12 +638,12 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
-;       |funG:g1|                                ; 471 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1                                                                                            ; funG        ; work         ;
-;          |mds:mds0|                            ; 87 (71)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0                                                                                   ; mds         ; work         ;
-;             |mul5B:y35|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mul5B:y35                                                                         ; mul5B       ; work         ;
+;       |funG:g1|                                ; 472 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1                                                                                            ; funG        ; work         ;
+;          |mds:mds0|                            ; 88 (69)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0                                                                                   ; mds         ; work         ;
+;             |mul5B:y35|                        ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mul5B:y35                                                                         ; mul5B       ; work         ;
 ;             |mulEF:y0E|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mulEF:y0E                                                                         ; mulEF       ; work         ;
 ;             |mulEF:y1E|                        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mulEF:y1E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y2E|                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
+;             |mulEF:y2E|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
 ;          |sBox:sb0|                            ; 384 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0                                                                                   ; sBox        ; work         ;
 ;             |ssBox:sb0|                        ; 96 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
@@ -709,14 +710,14 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
 ;       |pht:pht0|                               ; 63 (63)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|pht:pht0                                                                                           ; pht         ; work         ;
-;    |kBox:kb0|                                  ; 856 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0                                                                                                    ; kBox        ; work         ;
-;       |funG:g0|                                ; 394 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0                                                                                            ; funG        ; work         ;
-;          |mds:mds0|                            ; 88 (74)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0                                                                                   ; mds         ; work         ;
+;    |kBox:kb0|                                  ; 858 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0                                                                                                    ; kBox        ; work         ;
+;       |funG:g0|                                ; 396 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0                                                                                            ; funG        ; work         ;
+;          |mds:mds0|                            ; 89 (75)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0                                                                                   ; mds         ; work         ;
 ;             |mul5B:y35|                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0|mul5B:y35                                                                         ; mul5B       ; work         ;
 ;             |mulEF:y0E|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0|mulEF:y0E                                                                         ; mulEF       ; work         ;
 ;             |mulEF:y1E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0|mulEF:y1E                                                                         ; mulEF       ; work         ;
 ;             |mulEF:y2E|                        ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
-;          |sBox:sb0|                            ; 306 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0                                                                                   ; sBox        ; work         ;
+;          |sBox:sb0|                            ; 307 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0                                                                                   ; sBox        ; work         ;
 ;             |ssBox:sb0|                        ; 88 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 24 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb0|qBox:q0|tBox:t0                                                         ; tBox        ; work         ;
@@ -755,13 +756,13 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
-;             |ssBox:sb3|                        ; 88 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3                                                                         ; ssBox       ; work         ;
+;             |ssBox:sb3|                        ; 89 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 24 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t3                                                         ; tBox        ; work         ;
-;                |qBox:q1|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1                                                                 ; qBox        ; work         ;
+;                |qBox:q1|                       ; 33 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1|tBox:t2                                                         ; tBox        ; work         ;
@@ -778,7 +779,7 @@ refer to the applicable agreement for further details.
 ;             |mulEF:y1E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|mds:mds0|mulEF:y1E                                                                         ; mulEF       ; work         ;
 ;             |mulEF:y2E|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
 ;          |sBox:sb0|                            ; 315 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0                                                                                   ; sBox        ; work         ;
-;             |ssBox:sb0|                        ; 96 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
+;             |ssBox:sb0|                        ; 97 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 31 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0|tBox:t1                                                         ; tBox        ; work         ;
@@ -789,7 +790,7 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q1|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q1|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q1|tBox:t3                                                         ; tBox        ; work         ;
-;                |qBox:q2|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2                                                                 ; qBox        ; work         ;
+;                |qBox:q2|                       ; 33 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
@@ -805,13 +806,13 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb1|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb1|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb1|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
-;             |ssBox:sb2|                        ; 66 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2                                                                         ; ssBox       ; work         ;
+;             |ssBox:sb2|                        ; 65 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2                                                                         ; ssBox       ; work         ;
 ;                |qBox:q1|                       ; 33 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1|tBox:t3                                                         ; tBox        ; work         ;
-;                |qBox:q2|                       ; 33 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2                                                                 ; qBox        ; work         ;
+;                |qBox:q2|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
@@ -1104,11 +1105,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 269   ;
-; Number of registers using Synchronous Clear  ; 6     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 64    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 268   ;
+; Number of registers using Clock Enable       ; 262   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1118,10 +1119,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |datapath|currState[4]     ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |datapath|rndCnt[7]        ;
-; 6:1                ; 64 bits   ; 256 LEs       ; 128 LEs              ; 128 LEs                ; Yes        ; |datapath|currBlock[50]    ;
-; 7:1                ; 64 bits   ; 256 LEs       ; 192 LEs              ; 64 LEs                 ; Yes        ; |datapath|currBlock[121]   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |datapath|currState[0]     ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |datapath|rndCnt[7]        ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |datapath|rndCnt[4]        ;
+; 12:1               ; 64 bits   ; 512 LEs       ; 128 LEs              ; 384 LEs                ; Yes        ; |datapath|currBlock[50]    ;
+; 10:1               ; 64 bits   ; 384 LEs       ; 256 LEs              ; 128 LEs                ; Yes        ; |datapath|currBlock[121]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -6193,21 +6195,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 389                         ;
 ; cycloneiii_ff         ; 269                         ;
-;     ENA               ; 263                         ;
-;     ENA SCLR          ; 5                           ;
-;     SCLR              ; 1                           ;
-; cycloneiii_lcell_comb ; 3343                        ;
-;     arith             ; 664                         ;
-;         2 data inputs ; 22                          ;
+;     ENA               ; 198                         ;
+;     ENA SLD           ; 64                          ;
+;     plain             ; 7                           ;
+; cycloneiii_lcell_comb ; 3379                        ;
+;     arith             ; 670                         ;
+;         2 data inputs ; 28                          ;
 ;         3 data inputs ; 642                         ;
-;     normal            ; 2679                        ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 725                         ;
-;         3 data inputs ; 236                         ;
-;         4 data inputs ; 1714                        ;
+;     normal            ; 2709                        ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 714                         ;
+;         3 data inputs ; 278                         ;
+;         4 data inputs ; 1712                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 28.30                       ;
-; Average LUT depth     ; 23.01                       ;
+; Max LUT depth         ; 26.30                       ;
+; Average LUT depth     ; 21.00                       ;
 +-----------------------+-----------------------------+
 
 
@@ -6216,7 +6218,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -6226,7 +6228,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 12 12:00:39 2022
+    Info: Processing started: Sat Nov 12 22:40:05 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off s2vFish -c s2vFish
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -6259,12 +6261,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file mul5B.s
     Info (12023): Found entity 1: mul5B File: /home/frank/hackermans/s2vFish/src/mul5B.sv Line: 1
 Warning (10222): Verilog HDL Parameter Declaration warning at tBox.sv(7): Parameter Declaration in module "tBox" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/frank/hackermans/s2vFish/src/tBox.sv Line: 7
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at datapath.sv(29): truncated value with size 32 to match size of target (5) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at datapath.sv(35): truncated value with size 32 to match size of target (5) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 35
-Warning (10230): Verilog HDL assignment warning at datapath.sv(39): truncated value with size 32 to match size of target (5) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 39
-Warning (10230): Verilog HDL assignment warning at datapath.sv(47): truncated value with size 32 to match size of target (8) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 47
-Warning (10230): Verilog HDL assignment warning at datapath.sv(48): truncated value with size 32 to match size of target (5) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 48
-Info (12128): Elaborating entity "kBox" for hierarchy "kBox:kb0" File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at datapath.sv(154): truncated value with size 32 to match size of target (8) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 154
+Warning (10230): Verilog HDL assignment warning at datapath.sv(156): truncated value with size 32 to match size of target (8) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 156
+Warning (10230): Verilog HDL assignment warning at datapath.sv(173): truncated value with size 32 to match size of target (8) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 173
+Warning (10230): Verilog HDL assignment warning at datapath.sv(192): truncated value with size 32 to match size of target (5) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 192
+Info (12128): Elaborating entity "kBox" for hierarchy "kBox:kb0" File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 214
 Warning (10230): Verilog HDL assignment warning at kBox.sv(11): truncated value with size 32 to match size of target (8) File: /home/frank/hackermans/s2vFish/src/kBox.sv Line: 11
 Warning (10230): Verilog HDL assignment warning at kBox.sv(12): truncated value with size 32 to match size of target (8) File: /home/frank/hackermans/s2vFish/src/kBox.sv Line: 12
 Info (12128): Elaborating entity "funG" for hierarchy "kBox:kb0|funG:g0" File: /home/frank/hackermans/s2vFish/src/kBox.sv Line: 14
@@ -6291,8 +6292,8 @@ Info (12128): Elaborating entity "mds" for hierarchy "kBox:kb0|funG:g0|mds:mds0"
 Info (12128): Elaborating entity "mul5B" for hierarchy "kBox:kb0|funG:g0|mds:mds0|mul5B:y05" File: /home/frank/hackermans/s2vFish/src/mds.sv Line: 8
 Info (12128): Elaborating entity "mulEF" for hierarchy "kBox:kb0|funG:g0|mds:mds0|mulEF:y0E" File: /home/frank/hackermans/s2vFish/src/mds.sv Line: 12
 Info (12128): Elaborating entity "pht" for hierarchy "kBox:kb0|pht:pht0" File: /home/frank/hackermans/s2vFish/src/kBox.sv Line: 17
-Info (12128): Elaborating entity "sKey" for hierarchy "sKey:sk0" File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 77
-Info (12128): Elaborating entity "funF" for hierarchy "funF:ff0" File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 79
+Info (12128): Elaborating entity "sKey" for hierarchy "sKey:sk0" File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 216
+Info (12128): Elaborating entity "funF" for hierarchy "funF:ff0" File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 218
 Info (278001): Inferred 50 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult11" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 9
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult36" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 14
@@ -6793,16 +6794,23 @@ Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Default" -- entit
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE10_LITE_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE10_LITE_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Default -section_id Top was ignored
+Info (144001): Generated suppressed messages file /home/frank/hackermans/s2vFish/src/output_files/s2vFish.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3860 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3896 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 260 input pins
     Info (21059): Implemented 129 output pins
-    Info (21061): Implemented 3471 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 223 warnings
-    Info: Peak virtual memory: 1036 megabytes
-    Info: Processing ended: Sat Nov 12 12:00:49 2022
+    Info (21061): Implemented 3507 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 222 warnings
+    Info: Peak virtual memory: 1034 megabytes
+    Info: Processing ended: Sat Nov 12 22:40:15 2022
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/frank/hackermans/s2vFish/src/output_files/s2vFish.map.smsg.
 
 

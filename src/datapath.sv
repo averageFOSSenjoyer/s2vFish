@@ -15,50 +15,89 @@ module datapath
         if (Reset)
             busy <= 1'b0;
         else if (Start && !busy) begin
-            currBlock <= block;
+            // LITTLE ENDIAN CONVERT
+            currBlock <= {block[103:96], block[111:104], block[119:112], block[127:120],
+                          block[71:64], block[79:72], block[87:80], block[95:88],
+                          block[39:32], block[47:40], block[55:48], block[63:56],
+                          block[7:0], block[15:8], block[23:16], block[31:24]};
             currKey <= key;
             currState <= 0;
             busy <= 1'b1;
-            rndCnt <= 0;
+            if (~EnDe)
+                rndCnt <= 0;
+            else
+                rndCnt <= 2;
         end
-        // input whitening
         else if (currState == 0) begin
             currBlock[127:96] <= currBlock[127:96] ^ k0;
             currBlock[95:64] <= currBlock[95:64] ^ k1;
-            rndCnt <= 1;
-            currState <= currState + 1;
+            if (~EnDe)
+                rndCnt <= 1;
+            else
+                rndCnt <= 3;
         end
         else if (currState == 1) begin
             currBlock[63:32] <= currBlock[63:32] ^ k0;
             currBlock[31:0] <= currBlock[31:0] ^ k1;
-            rndCnt <= 4;
-            currState <= currState + 1;
-        end
-        else if (currState == 2) begin
-            rndCnt <= 4;
-            currState <= currState + 1;
-            currBlock[127:96] <= currBlock[63:32];
-            currBlock[95:64] <= currBlock[31:0];
-            currBlock[63:32] <= currBlock[127:96];
-            currBlock[31:0] <= currBlock[95:64];
+            if (~EnDe)
+                rndCnt <= 4;
+            else
+                rndCnt <= 19;
         end
         // cipher rounds
-        else if (currState >= 3 && currState <= 25) begin
-            rndCnt <= rndCnt + 1;
-            currState <= currState + 1;
-            currBlock[31:0] <= currBlock[127:96];
-            currBlock[63:32] <= currBlock[95:64];
+        else if (currState >= 2 && currState <= 17) begin
+            currBlock[31:0] <= currBlock[95:64];
+            currBlock[63:32] <= currBlock[127:96];
             currBlock[95:64] <= b2;
             currBlock[127:96] <= a2;
+            if (~EnDe)
+                rndCnt <= rndCnt + 1;
+            else
+                rndCnt <= rndCnt - 1;
+        end
+        // final flip
+        else if (currState == 18) begin
+            currBlock[31:0] <= currBlock[95:64];
+            currBlock[63:32] <= currBlock[127:96];
+            currBlock[95:64] <= currBlock[31:0];
+            currBlock[127:96] <= currBlock[63:32];
+            if (~EnDe)
+                rndCnt <= 2;
+            else
+                rndCnt <= 0;
+        end
+        // output whitening
+        else if (currState == 19) begin
+            currBlock[127:96] <= currBlock[127:96] ^ k0;
+            currBlock[95:64] <= currBlock[95:64] ^ k1;
+            rndCnt <= rndCnt + 1;
+        end
+        else if (currState == 20) begin
+            currBlock[63:32] <= currBlock[63:32] ^ k0;
+            currBlock[31:0] <= currBlock[31:0] ^ k1;
+        end
+        // endian convert
+        else if (currState == 21) begin
+            currBlock <= {currBlock[103:96], currBlock[111:104], currBlock[119:112], currBlock[127:120],
+                            currBlock[71:64], currBlock[79:72], currBlock[87:80], currBlock[95:88],
+                            currBlock[39:32], currBlock[47:40], currBlock[55:48], currBlock[63:56],
+                            currBlock[7:0], currBlock[15:8], currBlock[23:16], currBlock[31:24]};
+        end
+        else if (currState == 22) begin
+            busy = 1'b0;
         end
 
-    end
 
+        if (currState >= 0 && currState <= 21)
+            currState <= currState + 1;
+
+    end
+	 
     always_comb begin
         // encrypt
         if (~EnDe) begin
             a1 = currBlock[63:32] ^ a0;
-            a2 = {a0[0], a0[31:1]};
+            a2 = {a1[0], a1[31:1]};
             b1 = {currBlock[30:0], currBlock[31]};
             b2 = b1 ^ b0;
         end
@@ -68,7 +107,7 @@ module datapath
             a2 = a1 ^ a0;
             b2 = {b1[0], b1[31:1]};
         end
-
+		  
         o = currBlock;
     end
 

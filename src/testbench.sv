@@ -25,13 +25,27 @@ module testbench();
     logic [31:0] k0, k1;
     assign k0 = d0.k0;
     assign k1 = d0.k1;
-    logic [31:0] gOut0, gOut1;
-    assign gOut0 = d0.kb0.gOut0;
-    assign gOut1 = d0.kb0.gOut1;
+    
+    // funF OUT
+    logic [31:0] a0, b0;
+    assign a0 = d0.a0;
+    assign b0 = d0.b0;
 
-    logic [31:0] sBoxOut0, sBoxOut1;
-    assign sBoxOut0 = d0.kb0.g0.sBoxOut;
-    assign sBoxOut1 = d0.kb0.g1.sBoxOut;
+    logic [31:0] a1, b1, a2, b2;
+    assign a1 = d0.a1;
+    assign a2 = d0.a2;
+     assign b1 = d0.b1;
+    assign b2 = d0.b2;
+
+    // // POST MDS
+    // logic [31:0] gOut0, gOut1;
+    // assign gOut0 = d0.kb0.gOut0;
+    // assign gOut1 = d0.kb0.gOut1;
+
+    // // PRE MDS
+    // logic [31:0] sBoxOut0, sBoxOut1;
+    // assign sBoxOut0 = d0.kb0.g0.sBoxOut;
+    // assign sBoxOut1 = d0.kb0.g1.sBoxOut;
 
     // logic [7:0] a3;
     // assign a3 = d0.kb0.g0.sb0.sb0.a3;
@@ -44,6 +58,9 @@ module testbench();
     // logic [7:0] i;
     // assign i = d0.kb0.g0.sb0.sb0.i;
 
+    logic [4:0] currState;
+    assign currState = d0.currState;
+
     initial begin: TEST
         block = 0;
         key = 0;
@@ -51,11 +68,44 @@ module testbench();
         Start = 0;
         EnDe = 0;
     
-    #2 Reset = 1;
-    #2 Reset = 0;
+    #2  Reset = 1;
+    #2  Reset = 0;
     
-    #2 Start = 1;
-    #2 Start = 0;
+    #2  Start = 1;
+    #2  Start = 0;
+
+    #60 Reset = 1;
+    #2  Reset = 0;
+        block = 128'h9F589F5CF6122C32B6BFEC2F2AE8C35A;
+        EnDe = 1;
+
+    #2  Start = 1;
+    #2  Start = 0;
+
+    #60 Reset = 1;
+    #2  Reset = 0;
+        block = 128'he5fa3c00addc12cc3e04c06358754a34;
+        EnDe = 0;
+
+    #2  Start = 1;
+    #2  Start = 0;
+
+    #60 Reset = 1;
+    #2  Reset = 0;
+        block = 128'hf8514fcb1e3a89e79cbf259601e840ec;
+        EnDe = 1;
+
+    #2  Start = 1;
+    #2  Start = 0;
+
+    #60 Reset = 1;
+        key = 128'h00000000000000000000000000000001;
+    #2  Reset = 0;
+        block = 0;
+        EnDe = 0;
+
+    #2  Start = 1;
+    #2  Start = 0;
 	end
 
     // logic [7:0] i, o;
@@ -110,6 +160,17 @@ module testbench();
 
     // #2  in_5b = 8'hDE;
 
+    // end
+
+    // logic [31:0] i, s0, s1;
+    // logic [31:0] o;
+
+    // sBox sb0 (.*);
+
+    // initial begin: TEST
+    //     i = 0;
+    //     s0 = 0;
+    //     s1 = 0;
     // end
 
 endmodule

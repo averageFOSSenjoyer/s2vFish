@@ -19,7 +19,7 @@ module qBox #(parameter q = 0)
 
     tBox #(.q(q), .t(0)) t0 (.i(a1), .o(a2));
     tBox #(.q(q), .t(1)) t1 (.i(b1), .o(b2));
-    tBox #(.q(q), .t(2)) t2 (.i(a3), .o(o[7:4]));
-    tBox #(.q(q), .t(3)) t3 (.i(b3), .o(o[3:0]));
+    tBox #(.q(q), .t(2)) t2 (.i(a3), .o(o[3:0]));
+    tBox #(.q(q), .t(3)) t3 (.i(b3), .o(o[7:4]));
 
 endmodule
