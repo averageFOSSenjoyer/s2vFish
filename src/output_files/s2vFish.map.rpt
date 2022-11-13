@@ -1,5 +1,5 @@
 Analysis & Synthesis report for s2vFish
-Sat Nov 12 22:44:39 2022
+Sun Nov 13 00:13:54 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -274,12 +274,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 266. Parameter Settings for User Entity Instance: funF:ff0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t3
 267. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult11
 268. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult36
-269. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult23
-270. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult48
-271. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult9
-272. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult10
-273. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult34
-274. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult35
+269. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult9
+270. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult10
+271. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult34
+272. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult35
+273. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult23
+274. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult48
 275. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult5
 276. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult6
 277. Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult30
@@ -352,13 +352,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 12 22:44:38 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 13 00:13:54 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; s2vFish                                     ;
 ; Top-level Entity Name              ; datapath                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,507                                       ;
-;     Total combinational functions  ; 3,379                                       ;
+; Total logic elements               ; 3,503                                       ;
+;     Total combinational functions  ; 3,375                                       ;
 ;     Dedicated logic registers      ; 269                                         ;
 ; Total registers                    ; 269                                         ;
 ; Total pins                         ; 389                                         ;
@@ -473,7 +473,7 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.0%      ;
+;     Processor 5            ;   0.1%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
@@ -495,8 +495,7 @@ refer to the applicable agreement for further details.
 ; funF.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/frank/hackermans/s2vFish/src/funF.sv                                              ;         ;
 ; kBox.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/frank/hackermans/s2vFish/src/kBox.sv                                              ;         ;
 ; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/frank/hackermans/s2vFish/src/datapath.sv                                          ;         ;
-; mulEF.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/frank/hackermans/s2vFish/src/mulEF.sv                                             ;         ;
-; mul5B.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/frank/hackermans/s2vFish/src/mul5B.sv                                             ;         ;
+; funMul.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/frank/hackermans/s2vFish/src/funMul.sv                                            ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                 ; /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
@@ -533,16 +532,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,507     ;
+; Estimated Total logic elements              ; 3,503     ;
 ;                                             ;           ;
-; Total combinational functions               ; 3379      ;
+; Total combinational functions               ; 3375      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1712      ;
-;     -- 3 input functions                    ; 920       ;
-;     -- <=2 input functions                  ; 747       ;
+;     -- 4 input functions                    ; 1720      ;
+;     -- 3 input functions                    ; 911       ;
+;     -- <=2 input functions                  ; 744       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2709      ;
+;     -- normal mode                          ; 2705      ;
 ;     -- arithmetic mode                      ; 670       ;
 ;                                             ;           ;
 ; Total registers                             ; 269       ;
@@ -555,8 +554,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 269       ;
-; Total fan-out                               ; 12543     ;
-; Average fan-out                             ; 2.83      ;
+; Total fan-out                               ; 12542     ;
+; Average fan-out                             ; 2.84      ;
 +---------------------------------------------+-----------+
 
 
@@ -565,14 +564,10 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                   ; Entity Name ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------+-------------+--------------+
-; |datapath                                      ; 3379 (581)          ; 269 (269)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 389  ; 0            ; 0          ; |datapath                                                                                                             ; datapath    ; work         ;
-;    |funF:ff0|                                  ; 1072 (64)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0                                                                                                    ; funF        ; work         ;
-;       |funG:g0|                                ; 473 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0                                                                                            ; funG        ; work         ;
-;          |mds:mds0|                            ; 89 (70)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0                                                                                   ; mds         ; work         ;
-;             |mul5B:y35|                        ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mul5B:y35                                                                         ; mul5B       ; work         ;
-;             |mulEF:y0E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mulEF:y0E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y1E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mulEF:y1E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y2E|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
+; |datapath                                      ; 3375 (581)          ; 269 (269)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 389  ; 0            ; 0          ; |datapath                                                                                                             ; datapath    ; work         ;
+;    |funF:ff0|                                  ; 1067 (64)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0                                                                                                    ; funF        ; work         ;
+;       |funG:g0|                                ; 470 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0                                                                                            ; funG        ; work         ;
+;          |mds:mds0|                            ; 86 (86)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|mds:mds0                                                                                   ; mds         ; work         ;
 ;          |sBox:sb0|                            ; 384 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0                                                                                   ; sBox        ; work         ;
 ;             |ssBox:sb0|                        ; 96 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
@@ -638,12 +633,8 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
-;       |funG:g1|                                ; 472 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1                                                                                            ; funG        ; work         ;
-;          |mds:mds0|                            ; 88 (69)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0                                                                                   ; mds         ; work         ;
-;             |mul5B:y35|                        ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mul5B:y35                                                                         ; mul5B       ; work         ;
-;             |mulEF:y0E|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mulEF:y0E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y1E|                        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mulEF:y1E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y2E|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
+;       |funG:g1|                                ; 470 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1                                                                                            ; funG        ; work         ;
+;          |mds:mds0|                            ; 86 (86)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|mds:mds0                                                                                   ; mds         ; work         ;
 ;          |sBox:sb0|                            ; 384 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0                                                                                   ; sBox        ; work         ;
 ;             |ssBox:sb0|                        ; 96 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
@@ -710,14 +701,10 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
 ;       |pht:pht0|                               ; 63 (63)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|funF:ff0|pht:pht0                                                                                           ; pht         ; work         ;
-;    |kBox:kb0|                                  ; 858 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0                                                                                                    ; kBox        ; work         ;
+;    |kBox:kb0|                                  ; 859 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0                                                                                                    ; kBox        ; work         ;
 ;       |funG:g0|                                ; 396 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0                                                                                            ; funG        ; work         ;
-;          |mds:mds0|                            ; 89 (75)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0                                                                                   ; mds         ; work         ;
-;             |mul5B:y35|                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0|mul5B:y35                                                                         ; mul5B       ; work         ;
-;             |mulEF:y0E|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0|mulEF:y0E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y1E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0|mulEF:y1E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y2E|                        ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
-;          |sBox:sb0|                            ; 307 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0                                                                                   ; sBox        ; work         ;
+;          |mds:mds0|                            ; 90 (90)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|mds:mds0                                                                                   ; mds         ; work         ;
+;          |sBox:sb0|                            ; 306 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0                                                                                   ; sBox        ; work         ;
 ;             |ssBox:sb0|                        ; 88 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 24 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb0|qBox:q0|tBox:t0                                                         ; tBox        ; work         ;
@@ -756,13 +743,13 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
-;             |ssBox:sb3|                        ; 89 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3                                                                         ; ssBox       ; work         ;
+;             |ssBox:sb3|                        ; 88 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3                                                                         ; ssBox       ; work         ;
 ;                |qBox:q0|                       ; 24 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t3                                                         ; tBox        ; work         ;
-;                |qBox:q1|                       ; 33 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1                                                                 ; qBox        ; work         ;
+;                |qBox:q1|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q1|tBox:t2                                                         ; tBox        ; work         ;
@@ -772,15 +759,11 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
-;       |funG:g1|                                ; 399 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1                                                                                            ; funG        ; work         ;
-;          |mds:mds0|                            ; 84 (68)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|mds:mds0                                                                                   ; mds         ; work         ;
-;             |mul5B:y35|                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|mds:mds0|mul5B:y35                                                                         ; mul5B       ; work         ;
-;             |mulEF:y0E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|mds:mds0|mulEF:y0E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y1E|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|mds:mds0|mulEF:y1E                                                                         ; mulEF       ; work         ;
-;             |mulEF:y2E|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|mds:mds0|mulEF:y2E                                                                         ; mulEF       ; work         ;
+;       |funG:g1|                                ; 400 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1                                                                                            ; funG        ; work         ;
+;          |mds:mds0|                            ; 85 (85)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|mds:mds0                                                                                   ; mds         ; work         ;
 ;          |sBox:sb0|                            ; 315 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0                                                                                   ; sBox        ; work         ;
-;             |ssBox:sb0|                        ; 97 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
-;                |qBox:q0|                       ; 31 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
+;             |ssBox:sb0|                        ; 89 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0                                                                         ; ssBox       ; work         ;
+;                |qBox:q0|                       ; 24 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q0|tBox:t2                                                         ; tBox        ; work         ;
@@ -790,7 +773,7 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q1|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q1|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q1|tBox:t3                                                         ; tBox        ; work         ;
-;                |qBox:q2|                       ; 33 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2                                                                 ; qBox        ; work         ;
+;                |qBox:q2|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb0|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
@@ -806,19 +789,19 @@ refer to the applicable agreement for further details.
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb1|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb1|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb1|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
-;             |ssBox:sb2|                        ; 65 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2                                                                         ; ssBox       ; work         ;
+;             |ssBox:sb2|                        ; 66 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2                                                                         ; ssBox       ; work         ;
 ;                |qBox:q1|                       ; 33 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q1|tBox:t3                                                         ; tBox        ; work         ;
-;                |qBox:q2|                       ; 32 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2                                                                 ; qBox        ; work         ;
+;                |qBox:q2|                       ; 33 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t2                                                         ; tBox        ; work         ;
 ;                   |tBox:t3|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb2|qBox:q2|tBox:t3                                                         ; tBox        ; work         ;
-;             |ssBox:sb3|                        ; 88 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb3                                                                         ; ssBox       ; work         ;
-;                |qBox:q0|                       ; 24 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q0                                                                 ; qBox        ; work         ;
+;             |ssBox:sb3|                        ; 95 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb3                                                                         ; ssBox       ; work         ;
+;                |qBox:q0|                       ; 31 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q0                                                                 ; qBox        ; work         ;
 ;                   |tBox:t0|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t0                                                         ; tBox        ; work         ;
 ;                   |tBox:t1|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t1                                                         ; tBox        ; work         ;
 ;                   |tBox:t2|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|kBox:kb0|funG:g1|sBox:sb0|ssBox:sb3|qBox:q0|tBox:t2                                                         ; tBox        ; work         ;
@@ -865,8 +848,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult14|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult14|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_arg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult14|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated ; add_sub_arg ; work         ;
-;       |lpm_mult:Mult15|                        ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult15                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 8 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult15|multcore:mult_core                                                                 ; multcore    ; work         ;
+;       |lpm_mult:Mult15|                        ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult15                                                                                    ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 9 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult15|multcore:mult_core                                                                 ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult15|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult15|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_brg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult15|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated ; add_sub_brg ; work         ;
@@ -885,8 +868,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult18|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult18|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_brg:auto_generated| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult18|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated ; add_sub_brg ; work         ;
-;       |lpm_mult:Mult19|                        ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult19                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 11 (7)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult19|multcore:mult_core                                                                 ; multcore    ; work         ;
+;       |lpm_mult:Mult19|                        ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult19                                                                                    ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 10 (6)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult19|multcore:mult_core                                                                 ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult19|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult19|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_arg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult19|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated ; add_sub_arg ; work         ;
@@ -910,8 +893,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult22|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult22|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_arg:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult22|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated ; add_sub_arg ; work         ;
-;       |lpm_mult:Mult23|                        ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult23                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 15 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult23|multcore:mult_core                                                                 ; multcore    ; work         ;
+;       |lpm_mult:Mult23|                        ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult23                                                                                    ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 10 (6)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult23|multcore:mult_core                                                                 ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult23|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult23|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_1vg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult23|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_1vg:auto_generated ; add_sub_1vg ; work         ;
@@ -960,8 +943,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult31|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult31|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_brg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult31|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated ; add_sub_brg ; work         ;
-;       |lpm_mult:Mult32|                        ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult32                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 9 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult32|multcore:mult_core                                                                 ; multcore    ; work         ;
+;       |lpm_mult:Mult32|                        ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult32                                                                                    ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 10 (7)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult32|multcore:mult_core                                                                 ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult32|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult32|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_arg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult32|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated ; add_sub_arg ; work         ;
@@ -970,8 +953,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult33|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult33|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_otg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult33|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_otg:auto_generated ; add_sub_otg ; work         ;
-;       |lpm_mult:Mult34|                        ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult34                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 7 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult34|multcore:mult_core                                                                 ; multcore    ; work         ;
+;       |lpm_mult:Mult34|                        ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult34                                                                                    ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 11 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult34|multcore:mult_core                                                                 ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult34|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult34|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_1vg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult34|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_1vg:auto_generated ; add_sub_1vg ; work         ;
@@ -1005,8 +988,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder                                                  ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                             ; lpm_add_sub ; work         ;
 ;                   |add_sub_arg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated  ; add_sub_arg ; work         ;
-;       |lpm_mult:Mult40|                        ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult40                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 8 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult40|multcore:mult_core                                                                 ; multcore    ; work         ;
+;       |lpm_mult:Mult40|                        ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult40                                                                                    ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 9 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult40|multcore:mult_core                                                                 ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult40|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult40|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_brg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult40|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated ; add_sub_brg ; work         ;
@@ -1025,8 +1008,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult43|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult43|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_brg:auto_generated| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult43|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated ; add_sub_brg ; work         ;
-;       |lpm_mult:Mult44|                        ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult44                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 11 (7)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult44|multcore:mult_core                                                                 ; multcore    ; work         ;
+;       |lpm_mult:Mult44|                        ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult44                                                                                    ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 10 (6)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult44|multcore:mult_core                                                                 ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult44|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult44|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_arg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult44|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated ; add_sub_arg ; work         ;
@@ -1045,8 +1028,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_arg:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult47|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated ; add_sub_arg ; work         ;
-;       |lpm_mult:Mult48|                        ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult48                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 15 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult48|multcore:mult_core                                                                 ; multcore    ; work         ;
+;       |lpm_mult:Mult48|                        ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult48                                                                                    ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 10 (6)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult48|multcore:mult_core                                                                 ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult48|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult48|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
 ;                   |add_sub_1vg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult48|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_1vg:auto_generated ; add_sub_1vg ; work         ;
@@ -1070,8 +1053,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder                                                  ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                             ; lpm_add_sub ; work         ;
 ;                   |add_sub_brg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated  ; add_sub_brg ; work         ;
-;       |lpm_mult:Mult7|                         ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult7                                                                                     ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 9 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult7|multcore:mult_core                                                                  ; multcore    ; work         ;
+;       |lpm_mult:Mult7|                         ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult7                                                                                     ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 10 (7)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult7|multcore:mult_core                                                                  ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder                                                  ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                             ; lpm_add_sub ; work         ;
 ;                   |add_sub_arg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated  ; add_sub_arg ; work         ;
@@ -1080,8 +1063,8 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder                                                  ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                             ; lpm_add_sub ; work         ;
 ;                   |add_sub_otg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_otg:auto_generated  ; add_sub_otg ; work         ;
-;       |lpm_mult:Mult9|                         ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult9                                                                                     ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 7 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult9|multcore:mult_core                                                                  ; multcore    ; work         ;
+;       |lpm_mult:Mult9|                         ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult9                                                                                     ; lpm_mult    ; work         ;
+;          |multcore:mult_core|                  ; 11 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult9|multcore:mult_core                                                                  ; multcore    ; work         ;
 ;             |mpar_add:padder|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder                                                  ; mpar_add    ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                             ; lpm_add_sub ; work         ;
 ;                   |add_sub_1vg:auto_generated| ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|sKey:sk0|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_1vg:auto_generated  ; add_sub_1vg ; work         ;
@@ -3950,76 +3933,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult23      ;
-+------------------------------------------------+---------+---------------------+
-; Parameter Name                                 ; Value   ; Type                ;
-+------------------------------------------------+---------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON      ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF     ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON      ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF     ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 7       ; Untyped             ;
-; LPM_WIDTHB                                     ; 8       ; Untyped             ;
-; LPM_WIDTHP                                     ; 15      ; Untyped             ;
-; LPM_WIDTHR                                     ; 15      ; Untyped             ;
-; LPM_WIDTHS                                     ; 1       ; Untyped             ;
-; LPM_REPRESENTATION                             ; SIGNED  ; Untyped             ;
-; LPM_PIPELINE                                   ; 0       ; Untyped             ;
-; LATENCY                                        ; 0       ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; YES     ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO      ; Untyped             ;
-; USE_EAB                                        ; OFF     ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5       ; Untyped             ;
-; DEVICE_FAMILY                                  ; MAX 10  ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL  ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT     ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO    ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0       ; Untyped             ;
-; CBXI_PARAMETER                                 ; NOTHING ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx      ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx      ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF     ; Untyped             ;
-+------------------------------------------------+---------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult48      ;
-+------------------------------------------------+---------+---------------------+
-; Parameter Name                                 ; Value   ; Type                ;
-+------------------------------------------------+---------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON      ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF     ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON      ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF     ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 7       ; Untyped             ;
-; LPM_WIDTHB                                     ; 8       ; Untyped             ;
-; LPM_WIDTHP                                     ; 15      ; Untyped             ;
-; LPM_WIDTHR                                     ; 15      ; Untyped             ;
-; LPM_WIDTHS                                     ; 1       ; Untyped             ;
-; LPM_REPRESENTATION                             ; SIGNED  ; Untyped             ;
-; LPM_PIPELINE                                   ; 0       ; Untyped             ;
-; LATENCY                                        ; 0       ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; YES     ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO      ; Untyped             ;
-; USE_EAB                                        ; OFF     ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5       ; Untyped             ;
-; DEVICE_FAMILY                                  ; MAX 10  ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL  ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT     ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO    ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0       ; Untyped             ;
-; CBXI_PARAMETER                                 ; NOTHING ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx      ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx      ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF     ; Untyped             ;
-+------------------------------------------------+---------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult9       ;
 +------------------------------------------------+---------+---------------------+
 ; Parameter Name                                 ; Value   ; Type                ;
@@ -4156,6 +4069,76 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
 +------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult23      ;
++------------------------------------------------+---------+---------------------+
+; Parameter Name                                 ; Value   ; Type                ;
++------------------------------------------------+---------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON      ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF     ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON      ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF     ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 7       ; Untyped             ;
+; LPM_WIDTHB                                     ; 8       ; Untyped             ;
+; LPM_WIDTHP                                     ; 15      ; Untyped             ;
+; LPM_WIDTHR                                     ; 15      ; Untyped             ;
+; LPM_WIDTHS                                     ; 1       ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED  ; Untyped             ;
+; LPM_PIPELINE                                   ; 0       ; Untyped             ;
+; LATENCY                                        ; 0       ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; YES     ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO      ; Untyped             ;
+; USE_EAB                                        ; OFF     ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5       ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10  ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL  ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT     ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO    ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0       ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx      ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx      ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF     ; Untyped             ;
++------------------------------------------------+---------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sKey:sk0|lpm_mult:Mult48      ;
++------------------------------------------------+---------+---------------------+
+; Parameter Name                                 ; Value   ; Type                ;
++------------------------------------------------+---------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON      ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF     ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON      ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF     ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 7       ; Untyped             ;
+; LPM_WIDTHB                                     ; 8       ; Untyped             ;
+; LPM_WIDTHP                                     ; 15      ; Untyped             ;
+; LPM_WIDTHR                                     ; 15      ; Untyped             ;
+; LPM_WIDTHS                                     ; 1       ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED  ; Untyped             ;
+; LPM_PIPELINE                                   ; 0       ; Untyped             ;
+; LATENCY                                        ; 0       ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; YES     ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO      ; Untyped             ;
+; USE_EAB                                        ; OFF     ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5       ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10  ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL  ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT     ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO    ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0       ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx      ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx      ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF     ; Untyped             ;
++------------------------------------------------+---------+---------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -5657,28 +5640,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                     ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                       ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                       ;
-; Entity Instance                       ; sKey:sk0|lpm_mult:Mult23 ;
-;     -- LPM_WIDTHA                     ; 7                        ;
-;     -- LPM_WIDTHB                     ; 8                        ;
-;     -- LPM_WIDTHP                     ; 15                       ;
-;     -- LPM_REPRESENTATION             ; SIGNED                   ;
-;     -- INPUT_A_IS_CONSTANT            ; YES                      ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                       ;
-;     -- USE_EAB                        ; OFF                      ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                     ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                       ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                       ;
-; Entity Instance                       ; sKey:sk0|lpm_mult:Mult48 ;
-;     -- LPM_WIDTHA                     ; 7                        ;
-;     -- LPM_WIDTHB                     ; 8                        ;
-;     -- LPM_WIDTHP                     ; 15                       ;
-;     -- LPM_REPRESENTATION             ; SIGNED                   ;
-;     -- INPUT_A_IS_CONSTANT            ; YES                      ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                       ;
-;     -- USE_EAB                        ; OFF                      ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                     ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                       ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                       ;
 ; Entity Instance                       ; sKey:sk0|lpm_mult:Mult9  ;
 ;     -- LPM_WIDTHA                     ; 7                        ;
 ;     -- LPM_WIDTHB                     ; 8                        ;
@@ -5717,6 +5678,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- LPM_WIDTHB                     ; 8                        ;
 ;     -- LPM_WIDTHP                     ; 15                       ;
 ;     -- LPM_REPRESENTATION             ; UNSIGNED                 ;
+;     -- INPUT_A_IS_CONSTANT            ; YES                      ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                       ;
+;     -- USE_EAB                        ; OFF                      ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                     ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                       ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                       ;
+; Entity Instance                       ; sKey:sk0|lpm_mult:Mult23 ;
+;     -- LPM_WIDTHA                     ; 7                        ;
+;     -- LPM_WIDTHB                     ; 8                        ;
+;     -- LPM_WIDTHP                     ; 15                       ;
+;     -- LPM_REPRESENTATION             ; SIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; YES                      ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                       ;
+;     -- USE_EAB                        ; OFF                      ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                     ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                       ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                       ;
+; Entity Instance                       ; sKey:sk0|lpm_mult:Mult48 ;
+;     -- LPM_WIDTHA                     ; 7                        ;
+;     -- LPM_WIDTHB                     ; 8                        ;
+;     -- LPM_WIDTHP                     ; 15                       ;
+;     -- LPM_REPRESENTATION             ; SIGNED                   ;
 ;     -- INPUT_A_IS_CONSTANT            ; YES                      ;
 ;     -- INPUT_B_IS_CONSTANT            ; NO                       ;
 ;     -- USE_EAB                        ; OFF                      ;
@@ -6198,18 +6181,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 198                         ;
 ;     ENA SLD           ; 64                          ;
 ;     plain             ; 7                           ;
-; cycloneiii_lcell_comb ; 3379                        ;
+; cycloneiii_lcell_comb ; 3375                        ;
 ;     arith             ; 670                         ;
 ;         2 data inputs ; 28                          ;
 ;         3 data inputs ; 642                         ;
-;     normal            ; 2709                        ;
+;     normal            ; 2705                        ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 714                         ;
-;         3 data inputs ; 278                         ;
-;         4 data inputs ; 1712                        ;
+;         2 data inputs ; 711                         ;
+;         3 data inputs ; 269                         ;
+;         4 data inputs ; 1720                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 26.30                       ;
-; Average LUT depth     ; 21.00                       ;
+; Average LUT depth     ; 21.01                       ;
 +-----------------------+-----------------------------+
 
 
@@ -6228,7 +6211,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 12 22:44:28 2022
+    Info: Processing started: Sun Nov 13 00:13:44 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off s2vFish -c s2vFish
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -6242,7 +6225,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file qBox.sv
 Info (12021): Found 1 design units, including 1 entities, in source file sKey.sv
     Info (12023): Found entity 1: sKey File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mds.sv
-    Info (12023): Found entity 1: mds File: /home/frank/hackermans/s2vFish/src/mds.sv Line: 1
+    Info (12023): Found entity 1: mds File: /home/frank/hackermans/s2vFish/src/mds.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file funG.sv
     Info (12023): Found entity 1: funG File: /home/frank/hackermans/s2vFish/src/funG.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pht.sv
@@ -6255,10 +6238,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file datapat
     Info (12023): Found entity 1: datapath File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
     Info (12023): Found entity 1: testbench File: /home/frank/hackermans/s2vFish/src/testbench.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mulEF.sv
-    Info (12023): Found entity 1: mulEF File: /home/frank/hackermans/s2vFish/src/mulEF.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mul5B.sv
-    Info (12023): Found entity 1: mul5B File: /home/frank/hackermans/s2vFish/src/mul5B.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file funMul.sv
 Warning (10222): Verilog HDL Parameter Declaration warning at tBox.sv(7): Parameter Declaration in module "tBox" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/frank/hackermans/s2vFish/src/tBox.sv Line: 7
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at datapath.sv(54): truncated value with size 32 to match size of target (8) File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 54
@@ -6289,20 +6269,18 @@ Info (12128): Elaborating entity "ssBox" for hierarchy "kBox:kb0|funG:g0|sBox:sb
 Info (12128): Elaborating entity "ssBox" for hierarchy "kBox:kb0|funG:g0|sBox:sb0|ssBox:sb2" File: /home/frank/hackermans/s2vFish/src/sBox.sv Line: 9
 Info (12128): Elaborating entity "ssBox" for hierarchy "kBox:kb0|funG:g0|sBox:sb0|ssBox:sb3" File: /home/frank/hackermans/s2vFish/src/sBox.sv Line: 10
 Info (12128): Elaborating entity "mds" for hierarchy "kBox:kb0|funG:g0|mds:mds0" File: /home/frank/hackermans/s2vFish/src/funG.sv Line: 10
-Info (12128): Elaborating entity "mul5B" for hierarchy "kBox:kb0|funG:g0|mds:mds0|mul5B:y05" File: /home/frank/hackermans/s2vFish/src/mds.sv Line: 8
-Info (12128): Elaborating entity "mulEF" for hierarchy "kBox:kb0|funG:g0|mds:mds0|mulEF:y0E" File: /home/frank/hackermans/s2vFish/src/mds.sv Line: 12
 Info (12128): Elaborating entity "pht" for hierarchy "kBox:kb0|pht:pht0" File: /home/frank/hackermans/s2vFish/src/kBox.sv Line: 17
 Info (12128): Elaborating entity "sKey" for hierarchy "sKey:sk0" File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 116
 Info (12128): Elaborating entity "funF" for hierarchy "funF:ff0" File: /home/frank/hackermans/s2vFish/src/datapath.sv Line: 118
 Info (278001): Inferred 50 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult11" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 9
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult36" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 14
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult23" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 11
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult48" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 16
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult9" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 9
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult10" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 9
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult34" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 14
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult35" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 14
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult23" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 11
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult48" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 16
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult5" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 8
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult6" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 8
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "sKey:sk0|Mult30" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 13
@@ -6362,23 +6340,6 @@ Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult11|mu
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_0vg.tdf
     Info (12023): Found entity 1: add_sub_0vg File: /home/frank/hackermans/s2vFish/src/db/add_sub_0vg.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult11|altshift:external_latency_ffs", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult11" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
-Info (12130): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult23" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 11
-Info (12133): Instantiated megafunction "sKey:sk0|lpm_mult:Mult23" with the following parameter: File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 11
-    Info (12134): Parameter "LPM_WIDTHA" = "7"
-    Info (12134): Parameter "LPM_WIDTHB" = "8"
-    Info (12134): Parameter "LPM_WIDTHP" = "15"
-    Info (12134): Parameter "LPM_WIDTHR" = "15"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult23|multcore:mult_core", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult23" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
-Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult23|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult23" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
-Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult23|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult23" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1vg.tdf
-    Info (12023): Found entity 1: add_sub_1vg File: /home/frank/hackermans/s2vFish/src/db/add_sub_1vg.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult23|altshift:external_latency_ffs", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult23" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Info (12130): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult9" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 9
 Info (12133): Instantiated megafunction "sKey:sk0|lpm_mult:Mult9" with the following parameter: File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 9
     Info (12134): Parameter "LPM_WIDTHA" = "7"
@@ -6390,6 +6351,12 @@ Info (12133): Instantiated megafunction "sKey:sk0|lpm_mult:Mult9" with the follo
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult9|multcore:mult_core", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult9" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult9" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult9" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1vg.tdf
+    Info (12023): Found entity 1: add_sub_1vg File: /home/frank/hackermans/s2vFish/src/db/add_sub_1vg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult9|altshift:external_latency_ffs", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult9" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Info (12130): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult10" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 9
 Info (12133): Instantiated megafunction "sKey:sk0|lpm_mult:Mult10" with the following parameter: File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 9
     Info (12134): Parameter "LPM_WIDTHA" = "7"
@@ -6406,6 +6373,17 @@ Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult10|mu
 Info (12131): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "sKey:sk0|lpm_mult:Mult10" File: /home/frank/intelFPGA_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_arg.tdf
     Info (12023): Found entity 1: add_sub_arg File: /home/frank/hackermans/s2vFish/src/db/add_sub_arg.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult23" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 11
+Info (12133): Instantiated megafunction "sKey:sk0|lpm_mult:Mult23" with the following parameter: File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 11
+    Info (12134): Parameter "LPM_WIDTHA" = "7"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "15"
+    Info (12134): Parameter "LPM_WIDTHR" = "15"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12130): Elaborated megafunction instantiation "sKey:sk0|lpm_mult:Mult6" File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 8
 Info (12133): Instantiated megafunction "sKey:sk0|lpm_mult:Mult6" with the following parameter: File: /home/frank/hackermans/s2vFish/src/sKey.sv Line: 8
     Info (12134): Parameter "LPM_WIDTHA" = "8"
@@ -6797,15 +6775,15 @@ Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Default" -- entit
 Info (144001): Generated suppressed messages file /home/frank/hackermans/s2vFish/src/output_files/s2vFish.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3896 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3892 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 260 input pins
     Info (21059): Implemented 129 output pins
-    Info (21061): Implemented 3507 logic cells
+    Info (21061): Implemented 3503 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 222 warnings
-    Info: Peak virtual memory: 1035 megabytes
-    Info: Processing ended: Sat Nov 12 22:44:39 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 1065 megabytes
+    Info: Processing ended: Sun Nov 13 00:13:54 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
