@@ -4,7 +4,6 @@ module testbench();
 	timeprecision 1ns;
 	
 	logic Clk;
-    integer error = 0;
 	
 	always begin : CLOCK_GENERATION
 		#1 Clk = ~Clk;
@@ -13,29 +12,29 @@ module testbench();
 		Clk = 0;
 	end
 
+    integer errorCnt = 0;
+
     logic [127:0] block, key;
     logic Start, Reset, EnDe;
     logic [127:0] o;
     logic busy;
 
     datapath d0 (.*);
-    logic[31:0] s0, s1;
-    assign s0 = d0.s0;
-    assign s1 = d0.s1;
-    logic [31:0] k0, k1;
-    assign k0 = d0.k0;
-    assign k1 = d0.k1;
+    // logic[31:0] s0, s1;
+    // assign s0 = d0.s0;
+    // assign s1 = d0.s1;
+    // logic [31:0] k0, k1;
+    // assign k0 = d0.k0;
+    // assign k1 = d0.k1;
     
-    // funF OUT
-    logic [31:0] a0, b0;
-    assign a0 = d0.a0;
-    assign b0 = d0.b0;
+    // // funF OUT
+    // logic [31:0] a0, b0;
+    // assign a0 = d0.a0;
+    // assign b0 = d0.b0;
 
-    logic [31:0] a1, b1, a2, b2;
-    assign a1 = d0.a1;
-    assign a2 = d0.a2;
-     assign b1 = d0.b1;
-    assign b2 = d0.b2;
+    // logic [31:0] a1, b1;
+    // assign a1 = d0.a1;
+    // assign b1 = d0.b1;
 
     // // POST MDS
     // logic [31:0] gOut0, gOut1;
@@ -58,54 +57,95 @@ module testbench();
     // logic [7:0] i;
     // assign i = d0.kb0.g0.sb0.sb0.i;
 
-    logic [4:0] currState;
-    assign currState = d0.currState;
+    // logic [4:0] currState;
+    // assign currState = d0.currState;
+
+    // logic [127:0] currKey;
+    // assign currKey = d0.currKey;
+
+    logic [127:0] savedBlock;
+    logic [127:0] savedKey;
 
     initial begin: TEST
-        block = 0;
-        key = 0;
         Reset = 0;
         Start = 0;
-        EnDe = 0;
+
+        for (int i = 0; i < 100; i++) begin
+                EnDe = 0;
+                savedBlock = {$urandom(), $urandom(), $urandom(), $urandom()};
+                savedKey = {$urandom(), $urandom(), $urandom(), $urandom()};
+            #2  Reset = 1;
+            #2  Reset = 0;
+                block = savedBlock;
+                key = savedKey;                
+            
+            #2  Start = 1;
+            #2  Start = 0;
+                block = 128'hx;
+                key = 128'hx;
+
+            #45 block = o;
+                EnDe = 1;
+            #2  Reset = 1;
+            #2  Reset = 0;
+                key = savedKey;
+
+            #2  Start = 1;
+            #2  Start = 0;
+                block = 128'hx;
+                key = 128'hx;
+
+            #45 if (d0.o !== savedBlock)
+                    errorCnt++;
+        end
+        
+    // #2  Reset = 1;
+    // #2  Reset = 0;
     
-    #2  Reset = 1;
-    #2  Reset = 0;
-    
-    #2  Start = 1;
-    #2  Start = 0;
+    // #2  Start = 1;
+    // #2  Start = 0;
 
-    #60 Reset = 1;
-    #2  Reset = 0;
-        block = 128'h9F589F5CF6122C32B6BFEC2F2AE8C35A;
-        EnDe = 1;
+    // #60 Reset = 1;
+    // #2  Reset = 0;
+    //     block = 128'h9F589F5CF6122C32B6BFEC2F2AE8C35A;
+    //     EnDe = 1;
 
-    #2  Start = 1;
-    #2  Start = 0;
+    // #2  Start = 1;
+    // #2  Start = 0;
 
-    #60 Reset = 1;
-    #2  Reset = 0;
-        block = 128'he5fa3c00addc12cc3e04c06358754a34;
-        EnDe = 0;
+    // #60 Reset = 1;
+    // #2  Reset = 0;
+    //     block = 128'he5fa3c00addc12cc3e04c06358754a34;
+    //     EnDe = 0;
 
-    #2  Start = 1;
-    #2  Start = 0;
+    // #2  Start = 1;
+    // #2  Start = 0;
 
-    #60 Reset = 1;
-    #2  Reset = 0;
-        block = 128'hf8514fcb1e3a89e79cbf259601e840ec;
-        EnDe = 1;
+    // #60 Reset = 1;
+    // #2  Reset = 0;
+    //     block = 128'hf8514fcb1e3a89e79cbf259601e840ec;
+    //     EnDe = 1;
 
-    #2  Start = 1;
-    #2  Start = 0;
+    // #2  Start = 1;
+    // #2  Start = 0;
 
-    #60 Reset = 1;
-        key = 128'h00000000000000000000000000000001;
-    #2  Reset = 0;
-        block = 0;
-        EnDe = 0;
+    // #60 Reset = 1;
+    //     key = 128'h000102030405060708090a0b0c0d0e0f;
+    // #2  Reset = 0;
+    //     block = 0;
+    //     EnDe = 0;
 
-    #2  Start = 1;
-    #2  Start = 0;
+    // #2  Start = 1;
+    // #2  Start = 0;
+
+    // #60 Reset = 1;
+    //     key = 128'h000102030405060708090a0b0c0d0e0f;
+    // #2  Reset = 0;
+    //     block = 128'h6275e8ca35b36c108ad6d5f84f0cc5a3;
+    //     EnDe = 1;
+
+    // #2  Start = 1;
+    // #2  Start = 0;
 	end
 
     // logic [7:0] i, o;
