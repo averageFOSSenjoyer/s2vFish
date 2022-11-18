@@ -28,18 +28,19 @@ module testbench();
         Reset = 0;
         Start = 0;
 
+    #2  Reset = 1;
+    #2  Reset = 0;
+
         for (int i = 0; i < 100; i++) begin
                 EnDe = 0;
                 savedBlock = {$urandom(), $urandom(), $urandom(), $urandom()};
                 savedKey = {$urandom(), $urandom(), $urandom(), $urandom()};
 					 
-					 $display("/**********************************************/ ");
-					 $display("[Round #] %d ", i);
-					 $display("[Block] %h ", savedBlock);
-					 $display("[Key] %h ", savedKey);
+				$display("/**********************************************/ ");
+				$display("[Round #] %d ", i + 1);
+				$display("[Block] %h ", savedBlock);
+				$display("[Key] %h ", savedKey);
 					 
-            #2  Reset = 1;
-            #2  Reset = 0;
                 block = savedBlock;
                 key = savedKey;                
             
@@ -50,13 +51,10 @@ module testbench();
 
             #45 block = o;
                 EnDe = 1;
-					 
-					 $display("[Encoded block] %h", block);
-					
-            #2  Reset = 1;
-            #2  Reset = 0;
                 key = savedKey;
-
+					 
+				$display("[Encoded block] %h", block);
+					
             #2  Start = 1;
             #2  Start = 0;
                 block = 128'hx;
@@ -65,7 +63,7 @@ module testbench();
             #45 if (o !== savedBlock)
                     errorCnt++;
 						  
-					 $display("[Decoded block] %h", o);
+				$display("[Decoded block] %h", o);
         end
 	end
 endmodule
