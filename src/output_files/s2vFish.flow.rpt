@@ -1,5 +1,5 @@
 Flow report for s2vFish
-Sun Nov 13 14:02:22 2022
+Sun Nov 20 18:47:19 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,24 +40,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Nov 13 14:02:22 2022       ;
+; Flow Status                        ; Successful - Sun Nov 20 18:47:19 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; s2vFish                                     ;
-; Top-level Entity Name              ; datapath                                    ;
+; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,146                                       ;
-;     Total combinational functions  ; 3,018                                       ;
-;     Dedicated logic registers      ; 267                                         ;
-; Total registers                    ; 267                                         ;
-; Total pins                         ; 389                                         ;
+; Total logic elements               ; 7,621 / 49,760 ( 15 % )                     ;
+;     Total combinational functions  ; 6,856 / 49,760 ( 14 % )                     ;
+;     Dedicated logic registers      ; 3,079 / 49,760 ( 6 % )                      ;
+; Total registers                    ; 3148                                        ;
+; Total pins                         ; 40 / 360 ( 11 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total memory bits                  ; 11,392 / 1,677,312 ( < 1 % )                ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -66,41 +66,52 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/13/2022 14:02:10 ;
+; Start date & time ; 11/20/2022 18:46:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; s2vFish             ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                   ;
-+--------------------------------------+----------------------------------------+---------------+-------------------+----------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name       ; Section Id     ;
-+--------------------------------------+----------------------------------------+---------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 244238450230530.166836973013021        ; --            ; --                ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                ; testbench      ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --                ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --                ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --                ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --                ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; testbench.sv                           ; --            ; --                ; testbench      ;
-; EDA_TEST_BENCH_MODULE_NAME           ; testbench                              ; --            ; --                ; testbench      ;
-; EDA_TEST_BENCH_NAME                  ; testbench                              ; --            ; --                ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 5000 ns                                ; --            ; --                ; testbench      ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --                ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --                ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --                ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; DE10_LITE_Default ; Top            ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; datapath          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; DE10_LITE_Default ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; datapath          ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; DE10_LITE_Default ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; datapath          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --                ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --                ; --             ;
-; TOP_LEVEL_ENTITY                     ; datapath                               ; s2vFish       ; --                ; --             ;
-+--------------------------------------+----------------------------------------+---------------+-------------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                      ;
++--------------------------------------+-----------------------------------------------------------+---------------+-------------------+----------------+
+; Assignment Name                      ; Value                                                     ; Default Value ; Entity Name       ; Section Id     ;
++--------------------------------------+-----------------------------------------------------------+---------------+-------------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 59603933533008.166899156165174                            ; --            ; --                ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                        ; --            ; --                ; testbench      ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                 ; --            ; --                ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                                         ; --            ; --                ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)                           ; <None>        ; --                ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                           ; --            ; --                ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; testbench.sv                                              ; --            ; --                ; testbench      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench                                                 ; --            ; --                ; testbench      ;
+; EDA_TEST_BENCH_NAME                  ; testbench                                                 ; --            ; --                ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 us                                                    ; --            ; --                ; testbench      ;
+; EDA_TIME_SCALE                       ; 1 ps                                                      ; --            ; --                ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                        ; --            ; --                ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                         ; --            ; --                ; --             ;
+; MISC_FILE                            ; NIOSsoc/synthesis/../NIOSsoc.cmp                          ; --            ; --                ; --             ;
+; MISC_FILE                            ; NIOSsoc/synthesis/../../NIOSsoc.qsys                      ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                         ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                         ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                ; --            ; --                ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                    ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                    ; --            ; top               ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                    ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                    ; --            ; top               ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                    ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                    ; --            ; top               ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                       ; --            ; --                ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                     ; --            ; --                ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                              ; --            ; --                ; --             ;
+; SLD_FILE                             ; NIOSsoc/synthesis/NIOSsoc.regmap                          ; --            ; --                ; --             ;
+; SLD_FILE                             ; NIOSsoc/synthesis/NIOSsoc.debuginfo                       ; --            ; --                ; --             ;
+; SLD_INFO                             ; QSYS_NAME NIOSsoc HAS_SOPCINFO 1 GENERATION_ID 1668991037 ; --            ; NIOSsoc           ; --             ;
+; SOPCINFO_FILE                        ; NIOSsoc/synthesis/../../NIOSsoc.sopcinfo                  ; --            ; --                ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                        ; --            ; --                ; --             ;
+; TOP_LEVEL_ENTITY                     ; top                                                       ; s2vFish       ; --                ; --             ;
++--------------------------------------+-----------------------------------------------------------+---------------+-------------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -108,8 +119,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 1020 MB             ; 00:00:22                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis ; 00:00:30     ; 1.0                     ; 1256 MB             ; 00:00:49                           ;
+; Fitter               ; 00:00:35     ; 1.5                     ; 2041 MB             ; 00:01:16                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 837 MB              ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:04     ; 2.8                     ; 1024 MB             ; 00:00:10                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1172 MB             ; 00:00:02                           ;
+; Total                ; 00:01:13     ; --                      ; --                  ; 00:02:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -119,6 +134,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
+; Fitter               ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
+; Assembler            ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
+; Timing Analyzer      ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
+; EDA Netlist Writer   ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -126,6 +145,10 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off s2vFish -c s2vFish
+quartus_fit --read_settings_files=off --write_settings_files=off s2vFish -c s2vFish
+quartus_asm --read_settings_files=off --write_settings_files=off s2vFish -c s2vFish
+quartus_sta s2vFish -c s2vFish
+quartus_eda --read_settings_files=off --write_settings_files=off s2vFish -c s2vFish
 
 
 

@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Sun Nov 13 14:02:21 2022
+Analysis & Synthesis Status : Successful - Sun Nov 20 18:46:32 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : s2vFish
-Top-level Entity Name : datapath
+Top-level Entity Name : top
 Family : MAX 10
-Total logic elements : 3,146
-    Total combinational functions : 3,018
-    Dedicated logic registers : 267
-Total registers : 267
-Total pins : 389
+Total logic elements : 8,111
+    Total combinational functions : 6,836
+    Dedicated logic registers : 3,122
+Total registers : 3122
+Total pins : 40
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 11,392
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total PLLs : 1
 UFM blocks : 0
 ADC blocks : 0

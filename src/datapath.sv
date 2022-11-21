@@ -85,7 +85,11 @@ module datapath
                             currBlock[39:32], currBlock[47:40], currBlock[55:48], currBlock[63:56],
                             currBlock[7:0], currBlock[15:8], currBlock[23:16], currBlock[31:24]};
         end
-        else if (currState == 22) begin
+	    else if (currState == 22) begin
+            if (~Start)
+                currState <= currState + 1;
+		end
+        else if (currState == 23) begin
             busy = 1'b0;
         end
 
