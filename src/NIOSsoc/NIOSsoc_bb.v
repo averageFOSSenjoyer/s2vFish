@@ -27,7 +27,8 @@ module NIOSsoc (
 	sdram_wire_dqm,
 	sdram_wire_ras_n,
 	sdram_wire_we_n,
-	start_export);	
+	start_export,
+	addr_export);	
 
 	output	[31:0]	block0_export;
 	output	[31:0]	block1_export;
@@ -57,4 +58,5 @@ module NIOSsoc (
 	output		sdram_wire_ras_n;
 	output		sdram_wire_we_n;
 	output		start_export;
+	output	[7:0]	addr_export;
 endmodule

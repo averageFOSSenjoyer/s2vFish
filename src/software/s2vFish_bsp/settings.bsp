@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Nov 20, 2022 6:47:51 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1668991671431</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>/home/frank/hackermans/s2vFish/src/software/s2vFish_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Nov 30, 2022 11:11:01 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1669871461394</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\user\Documents\Quartus\s2vFish\src\software\s2vFish_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>../../NIOSsoc.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>..\..\NIOSsoc.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -1015,6 +1015,12 @@
         <MemoryMap>
                 <slaveDescriptor>busy</slaveDescriptor>
                 <addressRange>0x000002F0 - 0x000002FF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>addr</slaveDescriptor>
+                <addressRange>0x00000300 - 0x0000030F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

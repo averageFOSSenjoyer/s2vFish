@@ -2,17 +2,21 @@ module datapath
 (
     input logic [127:0] block, key,
     input logic Clk, Start, Reset, EnDe,
+	 input logic [7:0] addr,
     output logic [127:0] o,
     output logic busy
 );
 
-    logic [127:0] currBlock, currKey;
+    logic [127:0] currBlock, currKey, saveBlock;
     logic [4:0] rndCnt, currState; // 0-1 for input whitening, 2-17 for rounds, 18 for flip, 19-20 for output whitening, 21 for endian conversion
     logic [31:0] k0, k1, s0, s1, a0, b0, a1, b1;
+	 logic wren;
 
     always_ff @ (posedge Clk) begin
-        if (Reset)
+        if (Reset) begin
             busy <= 1'b0;
+				wren <= 1'b0;
+			end
         else if (Start && !busy) begin
             // LITTLE ENDIAN CONVERT
             currBlock <= {block[103:96], block[111:104], block[119:112], block[127:120],
@@ -25,6 +29,7 @@ module datapath
                         key[103:96], key[111:104], key[119:112], key[127:120]};
             currState <= 0;
             busy <= 1'b1;
+				wren <= 1'b0;
             if (~EnDe)
                 rndCnt <= 0;
             else
@@ -90,7 +95,8 @@ module datapath
                 currState <= currState + 1;
 		end
         else if (currState == 23) begin
-            busy = 1'b0;
+            busy <= 1'b0;
+				wren <= 1'b1;
         end
 
 
@@ -111,6 +117,7 @@ module datapath
         end
 		  
         o = currBlock;
+		  saveBlock = currBlock;
     end
 
     kBox kb0 (.m0(currKey[31:0]), .m1(currKey[63:32]), .m2(currKey[95:64]), .m3(currKey[127:96]), .i({3'b000, rndCnt}), .ao(k0), .bo(k1));    
@@ -118,5 +125,7 @@ module datapath
     sKey sk0 (.m(currKey), .s0(s0), .s1(s1));
 
     funF ff0 (.a(currBlock[127:96]), .b(currBlock[95:64]), .s0(s0), .s1(s1), .k0(k0), .k1(k1), .ao(a0), .bo(b0));
+
+	 ram r0 (.data(saveBlock), .wren(wren), .address(addr), .clock(Clk), .q());
 
 endmodule

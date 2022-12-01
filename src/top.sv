@@ -9,6 +9,7 @@ module top(
     logic [127:0] block, key, o;
 	 logic [31:0] block0_export, block1_export, block2_export, block3_export, key0_export, key1_export, key2_export, key3_export;
     logic Start, EnDe, Reset, busy;
+	 logic [7:0] addr;
 
     assign block = {block0_export, block1_export, block2_export, block3_export};
     assign key = {key0_export, key1_export, key2_export, key3_export};
@@ -32,6 +33,7 @@ module top(
         .ende_export         (EnDe),
         .reset_1_export      (Reset),
         .busy_export         (busy),
+		  .addr_export			  (addr),
         .sdram_clk_clk(DRAM_CLK),
         .sdram_wire_addr(DRAM_ADDR),
         .sdram_wire_ba(DRAM_BA),
@@ -44,6 +46,6 @@ module top(
         .sdram_wire_we_n(DRAM_WE_N)
     );
 
-    datapath u_datapath (.block, .key, .Clk(MAX10_CLK1_50), .Start(Start), .Reset(Reset), .EnDe, .o, .busy);
+    datapath u_datapath (.block, .key, .Clk(MAX10_CLK1_50), .Start(Start), .Reset(Reset), .EnDe, .addr, .o, .busy);
 
 endmodule

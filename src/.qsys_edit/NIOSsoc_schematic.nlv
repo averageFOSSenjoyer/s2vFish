@@ -6,49 +6,51 @@ preplace inst NIOSsoc.out0 -pg 1 -lvl 3 -y 330
 preplace inst NIOSsoc.nios2_gen2_0.reset_bridge -pg 1
 preplace inst NIOSsoc.block2 -pg 1 -lvl 3 -y 930
 preplace inst NIOSsoc.out1 -pg 1 -lvl 3 -y 430
-preplace inst NIOSsoc.clk_0 -pg 1 -lvl 1 -y 1310
+preplace inst NIOSsoc.clk_0 -pg 1 -lvl 1 -y 1330
 preplace inst NIOSsoc.block3 -pg 1 -lvl 3 -y 1030
-preplace inst NIOSsoc.sdram_pll -pg 1 -lvl 3 -y 1350
+preplace inst NIOSsoc.sdram_pll -pg 1 -lvl 3 -y 1450
 preplace inst NIOSsoc.out2 -pg 1 -lvl 3 -y 530
 preplace inst NIOSsoc.nios2_gen2_0.cpu -pg 1
-preplace inst NIOSsoc.start -pg 1 -lvl 3 -y 1790
+preplace inst NIOSsoc.start -pg 1 -lvl 3 -y 1890
 preplace inst NIOSsoc.out3 -pg 1 -lvl 3 -y 630
-preplace inst NIOSsoc.sysid_qsys_0 -pg 1 -lvl 3 -y 1510
-preplace inst NIOSsoc.sdram -pg 1 -lvl 3 -y 1230
-preplace inst NIOSsoc.nios2_gen2_0 -pg 1 -lvl 2 -y 1340
+preplace inst NIOSsoc.sysid_qsys_0 -pg 1 -lvl 3 -y 1610
+preplace inst NIOSsoc.sdram -pg 1 -lvl 3 -y 1250
+preplace inst NIOSsoc.nios2_gen2_0 -pg 1 -lvl 2 -y 1420
 preplace inst NIOSsoc.ende -pg 1 -lvl 3 -y 230
-preplace inst NIOSsoc.onchip_memory2_0 -pg 1 -lvl 3 -y 1430
+preplace inst NIOSsoc.onchip_memory2_0 -pg 1 -lvl 3 -y 1530
 preplace inst NIOSsoc.key0 -pg 1 -lvl 3 -y 1130
-preplace inst NIOSsoc.key1 -pg 1 -lvl 3 -y 1590
+preplace inst NIOSsoc.key1 -pg 1 -lvl 3 -y 1690
+preplace inst NIOSsoc.jtag_uart_0 -pg 1 -lvl 3 -y 1350
 preplace inst NIOSsoc -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst NIOSsoc.key2 -pg 1 -lvl 3 -y 1690
-preplace inst NIOSsoc.key3 -pg 1 -lvl 3 -y 1890
+preplace inst NIOSsoc.key2 -pg 1 -lvl 3 -y 1790
+preplace inst NIOSsoc.key3 -pg 1 -lvl 3 -y 1990
 preplace inst NIOSsoc.nios2_gen2_0.clock_bridge -pg 1
 preplace inst NIOSsoc.busy -pg 1 -lvl 3 -y 30
 preplace inst NIOSsoc.block0 -pg 1 -lvl 3 -y 130
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)NIOSsoc.reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.block2,(SLAVE)block2.external_connection) 1 0 3 NJ 960 NJ 960 NJ
-preplace netloc FAN_OUT<net_container>NIOSsoc</net_container>(SLAVE)key2.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)block3.clk,(SLAVE)key1.clk,(SLAVE)out1.clk,(SLAVE)ende.clk,(SLAVE)reset.clk,(MASTER)clk_0.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)out0.clk,(SLAVE)out3.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)key0.clk,(SLAVE)busy.clk,(SLAVE)block2.clk,(SLAVE)sdram_pll.inclk_interface,(SLAVE)block0.clk,(SLAVE)block1.clk,(SLAVE)key3.clk,(SLAVE)start.clk,(SLAVE)out2.clk) 1 1 2 310 1760 770
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)reset.external_connection,(SLAVE)NIOSsoc.reset_1) 1 0 3 NJ 760 NJ 760 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.start,(SLAVE)start.external_connection) 1 0 3 NJ 1740 NJ 1740 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.start,(SLAVE)start.external_connection) 1 0 3 NJ 1920 NJ 1920 NJ
 preplace netloc EXPORT<net_container>NIOSsoc</net_container>(MASTER)sdram_pll.c1,(MASTER)NIOSsoc.sdram_clk) 1 3 1 N
 preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.out1,(SLAVE)out1.external_connection) 1 0 3 NJ 460 NJ 460 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)key2.external_connection,(SLAVE)NIOSsoc.key2) 1 0 3 NJ 1720 NJ 1720 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.key1,(SLAVE)key1.external_connection) 1 0 3 NJ 1620 NJ 1620 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)sdram.wire,(SLAVE)NIOSsoc.sdram_wire) 1 0 3 NJ 1300 NJ 1300 NJ
-preplace netloc INTERCONNECT<net_container>NIOSsoc</net_container>(SLAVE)sysid_qsys_0.reset,(SLAVE)key2.reset,(SLAVE)out1.reset,(SLAVE)busy.reset,(SLAVE)key1.reset,(MASTER)clk_0.clk_reset,(SLAVE)start.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)out0.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)sdram_pll.inclk_interface_reset,(SLAVE)block2.reset,(SLAVE)key0.reset,(SLAVE)ende.reset,(SLAVE)reset.reset,(SLAVE)block1.reset,(SLAVE)block3.reset,(SLAVE)block0.reset,(SLAVE)out3.reset,(SLAVE)sdram.reset,(SLAVE)key3.reset,(SLAVE)out2.reset) 1 1 2 290 1940 750
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)clk_0.clk_in,(SLAVE)NIOSsoc.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)key3.external_connection,(SLAVE)NIOSsoc.key3) 1 0 3 NJ 2020 NJ 2020 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)block2.external_connection,(SLAVE)NIOSsoc.block2) 1 0 3 NJ 960 NJ 960 NJ
+preplace netloc POINT_TO_POINT<net_container>NIOSsoc</net_container>(SLAVE)sdram.clk,(MASTER)sdram_pll.c0) 1 2 2 770 1240 1030
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.block0,(SLAVE)block0.external_connection) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.key2,(SLAVE)key2.external_connection) 1 0 3 NJ 1820 NJ 1820 NJ
 preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.busy,(SLAVE)busy.external_connection) 1 0 3 NJ 60 NJ 60 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)key0.external_connection,(SLAVE)NIOSsoc.key0) 1 0 3 NJ 1000 NJ 1000 NJ
-preplace netloc POINT_TO_POINT<net_container>NIOSsoc</net_container>(MASTER)sdram_pll.c0,(SLAVE)sdram.clk) 1 2 2 790 1340 1030
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)out0.external_connection,(SLAVE)NIOSsoc.out0) 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.out3,(SLAVE)out3.external_connection) 1 0 3 NJ 660 NJ 660 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.out0,(SLAVE)out0.external_connection) 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)key0.external_connection,(SLAVE)NIOSsoc.key0) 1 0 3 NJ 1160 NJ 1160 NJ
+preplace netloc FAN_OUT<net_container>NIOSsoc</net_container>(SLAVE)sysid_qsys_0.clk,(SLAVE)key2.clk,(SLAVE)start.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)block3.clk,(SLAVE)out1.clk,(SLAVE)out0.clk,(SLAVE)block0.clk,(SLAVE)ende.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)out2.clk,(SLAVE)jtag_uart_0.clk,(MASTER)clk_0.clk,(SLAVE)reset.clk,(SLAVE)busy.clk,(SLAVE)key1.clk,(SLAVE)key3.clk,(SLAVE)out3.clk,(SLAVE)block1.clk,(SLAVE)key0.clk,(SLAVE)block2.clk,(SLAVE)sdram_pll.inclk_interface) 1 1 2 310 1360 730
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)key1.external_connection,(SLAVE)NIOSsoc.key1) 1 0 3 NJ 1720 NJ 1720 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)block1.external_connection,(SLAVE)NIOSsoc.block1) 1 0 3 NJ 860 NJ 860 NJ
+preplace netloc POINT_TO_POINT<net_container>NIOSsoc</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios2_gen2_0.irq) 1 2 1 690
 preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.block3,(SLAVE)block3.external_connection) 1 0 3 NJ 980 NJ 980 NJ
+preplace netloc INTERCONNECT<net_container>NIOSsoc</net_container>(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)block1.reset,(SLAVE)block3.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset,(SLAVE)jtag_uart_0.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)key0.reset,(SLAVE)key1.reset,(SLAVE)out2.reset,(SLAVE)out3.reset,(SLAVE)start.reset,(SLAVE)sdram.reset,(SLAVE)out1.reset,(SLAVE)key3.reset,(SLAVE)block2.reset,(SLAVE)key2.reset,(SLAVE)reset.reset,(SLAVE)sdram_pll.inclk_interface_reset,(SLAVE)out0.reset,(SLAVE)ende.reset,(SLAVE)block0.reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)busy.reset) 1 1 2 290 1380 710
 preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.out2,(SLAVE)out2.external_connection) 1 0 3 NJ 560 NJ 560 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.key3,(SLAVE)key3.external_connection) 1 0 3 NJ 1920 NJ 1920 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.ende,(SLAVE)ende.external_connection) 1 0 3 NJ 260 NJ 260 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.block1,(SLAVE)block1.external_connection) 1 0 3 NJ 860 NJ 860 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)block0.external_connection,(SLAVE)NIOSsoc.block0) 1 0 3 NJ 160 NJ 160 NJ
-preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)out3.external_connection,(SLAVE)NIOSsoc.out3) 1 0 3 NJ 660 NJ 660 NJ
-preplace netloc INTERCONNECT<net_container>NIOSsoc</net_container>(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)block2.s1,(SLAVE)key1.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)ende.s1,(SLAVE)sdram_pll.pll_slave,(SLAVE)busy.s1,(SLAVE)sdram.s1,(SLAVE)out3.s1,(SLAVE)onchip_memory2_0.s1,(SLAVE)key3.s1,(SLAVE)block1.s1,(SLAVE)key2.s1,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)block0.s1,(SLAVE)out1.s1,(SLAVE)reset.s1,(SLAVE)block3.s1,(SLAVE)out0.s1,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)key0.s1,(SLAVE)start.s1,(SLAVE)out2.s1) 1 1 2 330 1960 710
+preplace netloc INTERCONNECT<net_container>NIOSsoc</net_container>(SLAVE)sdram.s1,(SLAVE)busy.s1,(SLAVE)key0.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)sdram_pll.pll_slave,(SLAVE)block3.s1,(SLAVE)block0.s1,(SLAVE)ende.s1,(SLAVE)key1.s1,(SLAVE)block2.s1,(SLAVE)out1.s1,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)key3.s1,(SLAVE)out2.s1,(SLAVE)reset.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)onchip_memory2_0.s1,(SLAVE)start.s1,(SLAVE)key2.s1,(SLAVE)block1.s1,(SLAVE)out3.s1,(SLAVE)out0.s1,(MASTER)nios2_gen2_0.instruction_master) 1 1 2 310 2040 750
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)NIOSsoc.sdram_wire,(SLAVE)sdram.wire) 1 0 3 NJ 1320 NJ 1320 NJ
+preplace netloc EXPORT<net_container>NIOSsoc</net_container>(SLAVE)ende.external_connection,(SLAVE)NIOSsoc.ende) 1 0 3 NJ 260 NJ 260 NJ
 levelinfo -pg 1 0 80 1140
 levelinfo -hier NIOSsoc 90 120 450 840 1050

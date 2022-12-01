@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'NIOSsoc'
  * SOPC Builder design path: ../../NIOSsoc.sopcinfo
  *
- * Generated: Sun Nov 20 18:47:51 CST 2022
+ * Generated: Wed Nov 30 23:11:01 CST 2022
  */
 
 /*
@@ -176,6 +176,33 @@
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "NIOSsoc"
+
+
+/*
+ * addr configuration
+ *
+ */
+
+#define ADDR_BASE 0x300
+#define ADDR_BIT_CLEARING_EDGE_REGISTER 0
+#define ADDR_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define ADDR_CAPTURE 0
+#define ADDR_DATA_WIDTH 8
+#define ADDR_DO_TEST_BENCH_WIRING 0
+#define ADDR_DRIVEN_SIM_VALUE 0
+#define ADDR_EDGE_TYPE "NONE"
+#define ADDR_FREQ 50000000
+#define ADDR_HAS_IN 0
+#define ADDR_HAS_OUT 1
+#define ADDR_HAS_TRI 0
+#define ADDR_IRQ -1
+#define ADDR_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define ADDR_IRQ_TYPE "NONE"
+#define ADDR_NAME "/dev/addr"
+#define ADDR_RESET_VALUE 0
+#define ADDR_SPAN 16
+#define ADDR_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_addr altera_avalon_pio
 
 
 /*
@@ -733,7 +760,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1668991037
+#define SYSID_QSYS_0_TIMESTAMP 1669871104
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

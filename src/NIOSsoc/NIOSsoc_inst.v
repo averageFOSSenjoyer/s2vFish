@@ -26,6 +26,7 @@
 		.sdram_wire_dqm   (<connected-to-sdram_wire_dqm>),   //           .dqm
 		.sdram_wire_ras_n (<connected-to-sdram_wire_ras_n>), //           .ras_n
 		.sdram_wire_we_n  (<connected-to-sdram_wire_we_n>),  //           .we_n
-		.start_export     (<connected-to-start_export>)      //      start.export
+		.start_export     (<connected-to-start_export>),     //      start.export
+		.addr_export      (<connected-to-addr_export>)       //       addr.export
 	);
 
