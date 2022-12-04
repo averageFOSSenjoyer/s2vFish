@@ -29,6 +29,7 @@
     	_Alignas(16) uint32_t EnDe;
     	_Alignas(16) uint32_t reset;
     	_Alignas(16) uint32_t busy;
+    	_Alignas(8) uint8_t addr;
     } s2vFish_Interface_t;
 
     extern inline void reset(volatile s2vFish_Interface_t* s2vFish_Interface) {
@@ -37,7 +38,7 @@
     }
 
     extern inline void process(volatile s2vFish_Interface_t* s2vFish_Interface,
-    		                   uint32_t* block, uint32_t* key, uint32_t EnDe)
+    		                   uint32_t* block, uint32_t* key, uint32_t EnDe, uint8_t* addr)
     {
     	s2vFish_Interface->block0 = block[0];
     	s2vFish_Interface->block1 = block[1];
@@ -48,6 +49,7 @@
     	s2vFish_Interface->key2 = key[2];
     	s2vFish_Interface->key3 = key[3];
     	s2vFish_Interface->EnDe = EnDe;
+    	s2vFish_Interface->addr = *addr;
     	s2vFish_Interface->start = 1;
     	s2vFish_Interface->start = 0;
     	while (s2vFish_Interface->busy);
@@ -65,6 +67,12 @@
     	char* end;
     	fgets(buf, 50, stdin);
     	ret[0] = strtoll(buf, &end, 16); ret[1] = strtoll(end, &end, 16); ret[2] = strtoll(end, &end, 16); ret[3] = strtoll(end, &end, 16);
+    }
+
+    extern inline void stdinToHex8(char* buf, uint8_t* ret) {
+    	char* end;
+    	fgets(buf, 50, stdin);
+    	*ret = strtol(buf, &end, 16); // should cut off the top bits automatically so this is fine
     }
 
 #endif

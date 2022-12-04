@@ -8,6 +8,7 @@ int main() {
 	reset(s2vFish_Interface);
 
 	uint32_t block[4], key[4], EnDe;
+	uint8_t addr[1];
 	char buf[50];
 
 	while (1) {
@@ -26,12 +27,19 @@ int main() {
 		} while (*buf != 'y');
 
 		do {
+			printf("\nPlease enter the 8-bit location in memory you want to save in:\n");
+			stdinToHex8(buf, addr);
+			printf("\nIs this correct (y/N): %02x\n", addr[0]);
+			fgets(buf, sizeof(buf), stdin);
+		} while (*buf != 'y');
+
+		do {
 			printf("\nDo you want to encrypt(0) or decrypt(1)?\n");
 			fgets(buf, sizeof(buf), stdin);
 			EnDe = *buf - 48;
 		} while (EnDe != 0 && EnDe != 1);
 
-		process(s2vFish_Interface, block, key, EnDe);
+		process(s2vFish_Interface, block, key, EnDe, addr);
 		printResult(s2vFish_Interface);
 	}
 

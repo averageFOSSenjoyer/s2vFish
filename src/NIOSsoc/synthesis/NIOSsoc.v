@@ -4,6 +4,7 @@
 
 `timescale 1 ps / 1 ps
 module NIOSsoc (
+		output wire [7:0]  addr_export,      //       addr.export
 		output wire [31:0] block0_export,    //     block0.export
 		output wire [31:0] block1_export,    //     block1.export
 		output wire [31:0] block2_export,    //     block2.export
@@ -150,12 +151,28 @@ module NIOSsoc (
 	wire  [31:0] mm_interconnect_0_reset_s1_writedata;                        // mm_interconnect_0:reset_s1_writedata -> reset:writedata
 	wire  [31:0] mm_interconnect_0_busy_s1_readdata;                          // busy:readdata -> mm_interconnect_0:busy_s1_readdata
 	wire   [1:0] mm_interconnect_0_busy_s1_address;                           // mm_interconnect_0:busy_s1_address -> busy:address
+	wire         mm_interconnect_0_addr_s1_chipselect;                        // mm_interconnect_0:addr_s1_chipselect -> addr:chipselect
+	wire  [31:0] mm_interconnect_0_addr_s1_readdata;                          // addr:readdata -> mm_interconnect_0:addr_s1_readdata
+	wire   [1:0] mm_interconnect_0_addr_s1_address;                           // mm_interconnect_0:addr_s1_address -> addr:address
+	wire         mm_interconnect_0_addr_s1_write;                             // mm_interconnect_0:addr_s1_write -> addr:write_n
+	wire  [31:0] mm_interconnect_0_addr_s1_writedata;                         // mm_interconnect_0:addr_s1_writedata -> addr:writedata
 	wire         irq_mapper_receiver0_irq;                                    // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] nios2_gen2_0_irq_irq;                                        // irq_mapper:sender_irq -> nios2_gen2_0:irq
-	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [block0:reset_n, block1:reset_n, block2:reset_n, block3:reset_n, busy:reset_n, ende:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, key0:reset_n, key1:reset_n, key2:reset_n, key3:reset_n, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, onchip_memory2_0:reset, out0:reset_n, out1:reset_n, out2:reset_n, out3:reset_n, reset:reset_n, rst_translator:in_reset, sdram_pll:reset, start:reset_n, sysid_qsys_0:reset_n]
+	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [addr:reset_n, block0:reset_n, block1:reset_n, block2:reset_n, block3:reset_n, busy:reset_n, ende:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, key0:reset_n, key1:reset_n, key2:reset_n, key3:reset_n, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, onchip_memory2_0:reset, out0:reset_n, out1:reset_n, out2:reset_n, out3:reset_n, reset:reset_n, rst_translator:in_reset, sdram_pll:reset, start:reset_n, sysid_qsys_0:reset_n]
 	wire         rst_controller_reset_out_reset_req;                          // rst_controller:reset_req -> [nios2_gen2_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 	wire         nios2_gen2_0_debug_reset_request_reset;                      // nios2_gen2_0:debug_reset_request -> [rst_controller:reset_in1, rst_controller_001:reset_in1]
 	wire         rst_controller_001_reset_out_reset;                          // rst_controller_001:reset_out -> [mm_interconnect_0:sdram_reset_reset_bridge_in_reset_reset, sdram:reset_n]
+
+	NIOSsoc_addr addr (
+		.clk        (clk_clk),                              //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),      //               reset.reset_n
+		.address    (mm_interconnect_0_addr_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_addr_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_addr_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_addr_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_addr_s1_readdata),   //                    .readdata
+		.out_port   (addr_export)                           // external_connection.export
+	);
 
 	NIOSsoc_block0 block0 (
 		.clk        (clk_clk),                                //                 clk.clk
@@ -448,6 +465,11 @@ module NIOSsoc (
 		.nios2_gen2_0_instruction_master_waitrequest    (nios2_gen2_0_instruction_master_waitrequest),                 //                                         .waitrequest
 		.nios2_gen2_0_instruction_master_read           (nios2_gen2_0_instruction_master_read),                        //                                         .read
 		.nios2_gen2_0_instruction_master_readdata       (nios2_gen2_0_instruction_master_readdata),                    //                                         .readdata
+		.addr_s1_address                                (mm_interconnect_0_addr_s1_address),                           //                                  addr_s1.address
+		.addr_s1_write                                  (mm_interconnect_0_addr_s1_write),                             //                                         .write
+		.addr_s1_readdata                               (mm_interconnect_0_addr_s1_readdata),                          //                                         .readdata
+		.addr_s1_writedata                              (mm_interconnect_0_addr_s1_writedata),                         //                                         .writedata
+		.addr_s1_chipselect                             (mm_interconnect_0_addr_s1_chipselect),                        //                                         .chipselect
 		.block0_s1_address                              (mm_interconnect_0_block0_s1_address),                         //                                block0_s1.address
 		.block0_s1_write                                (mm_interconnect_0_block0_s1_write),                           //                                         .write
 		.block0_s1_readdata                             (mm_interconnect_0_block0_s1_readdata),                        //                                         .readdata

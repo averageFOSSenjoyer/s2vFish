@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="a96b57ac3dc083a2d8ec"/>
+    <hash md5_digest_80b="5d8b4f0f215a729a1f32"/>
   </project>
   <file_info>
     <file device="10M50DAF484C7G" path="s2vFish.sof" usercode="0xFFFFFFFF"/>
@@ -139,7 +139,7 @@
   <sld_infos>
     <sld_info hpath="NIOSsoc:u_NIOSsoc" name="u_NIOSsoc">
       <assignment_values>
-        <assignment_value text="QSYS_NAME NIOSsoc HAS_SOPCINFO 1 GENERATION_ID 1668991037"/>
+        <assignment_value text="QSYS_NAME NIOSsoc HAS_SOPCINFO 1 GENERATION_ID 1670191409"/>
       </assignment_values>
       <parameters/>
     </sld_info>

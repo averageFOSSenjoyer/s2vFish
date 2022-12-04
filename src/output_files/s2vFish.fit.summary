@@ -1,17 +1,17 @@
-Fitter Status : Successful - Sun Nov 20 18:47:08 2022
+Fitter Status : Successful - Sun Dec 04 16:07:49 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : s2vFish
 Top-level Entity Name : top
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 7,621 / 49,760 ( 15 % )
-    Total combinational functions : 6,856 / 49,760 ( 14 % )
-    Dedicated logic registers : 3,079 / 49,760 ( 6 % )
-Total registers : 3148
+Total logic elements : 7,692 / 49,760 ( 15 % )
+    Total combinational functions : 6,917 / 49,760 ( 14 % )
+    Dedicated logic registers : 3,109 / 49,760 ( 6 % )
+Total registers : 3178
 Total pins : 40 / 360 ( 11 % )
 Total virtual pins : 0
-Total memory bits : 11,392 / 1,677,312 ( < 1 % )
+Total memory bits : 44,160 / 1,677,312 ( 3 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
 Total PLLs : 1 / 4 ( 25 % )
 UFM blocks : 0 / 1 ( 0 % )

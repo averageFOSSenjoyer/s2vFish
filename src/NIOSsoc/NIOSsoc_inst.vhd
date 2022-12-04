@@ -27,7 +27,8 @@
 			sdram_wire_dqm   : out   std_logic_vector(1 downto 0);                     -- dqm
 			sdram_wire_ras_n : out   std_logic;                                        -- ras_n
 			sdram_wire_we_n  : out   std_logic;                                        -- we_n
-			start_export     : out   std_logic                                         -- export
+			start_export     : out   std_logic;                                        -- export
+			addr_export      : out   std_logic_vector(7 downto 0)                      -- export
 		);
 	end component NIOSsoc;
 
@@ -60,6 +61,7 @@
 			sdram_wire_dqm   => CONNECTED_TO_sdram_wire_dqm,   --           .dqm
 			sdram_wire_ras_n => CONNECTED_TO_sdram_wire_ras_n, --           .ras_n
 			sdram_wire_we_n  => CONNECTED_TO_sdram_wire_we_n,  --           .we_n
-			start_export     => CONNECTED_TO_start_export      --      start.export
+			start_export     => CONNECTED_TO_start_export,     --      start.export
+			addr_export      => CONNECTED_TO_addr_export       --       addr.export
 		);
 

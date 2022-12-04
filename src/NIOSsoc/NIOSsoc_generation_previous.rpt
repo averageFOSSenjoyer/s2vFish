@@ -1,7 +1,9 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/frank/hackermans/s2vFish/src/NIOSsoc.qsys --block-symbol-file --output-directory=/home/frank/hackermans/s2vFish/src/NIOSsoc --family="MAX 10" --part=10M50DAF484C7G
+Info: qsys-generate C:\Users\user\Documents\Quartus\s2vFish\src\NIOSsoc.qsys --block-symbol-file --output-directory=C:\Users\user\Documents\Quartus\s2vFish\src\NIOSsoc --family="MAX 10" --part=10M50DAF484C7G
 Progress: Loading src/NIOSsoc.qsys
 Progress: Reading input file
+Progress: Adding addr [altera_avalon_pio 18.1]
+Progress: Parameterizing module addr
 Progress: Adding block0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module block0
 Progress: Adding block1 [altera_avalon_pio 18.1]
@@ -65,9 +67,11 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/frank/hackermans/s2vFish/src/NIOSsoc.qsys --synthesis=VERILOG --output-directory=/home/frank/hackermans/s2vFish/src/NIOSsoc/synthesis --family="MAX 10" --part=10M50DAF484C7G
+Info: qsys-generate C:\Users\user\Documents\Quartus\s2vFish\src\NIOSsoc.qsys --synthesis=VERILOG --output-directory=C:\Users\user\Documents\Quartus\s2vFish\src\NIOSsoc\synthesis --family="MAX 10" --part=10M50DAF484C7G
 Progress: Loading src/NIOSsoc.qsys
 Progress: Reading input file
+Progress: Adding addr [altera_avalon_pio 18.1]
+Progress: Parameterizing module addr
 Progress: Adding block0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module block0
 Progress: Adding block1 [altera_avalon_pio 18.1]
@@ -132,33 +136,37 @@ Info: Inserting clock-crossing logic between cmd_demux.src5 and cmd_mux_005.sink
 Info: Inserting clock-crossing logic between cmd_demux_001.src5 and cmd_mux_005.sink1
 Info: Inserting clock-crossing logic between rsp_demux_005.src0 and rsp_mux.sink5
 Info: Inserting clock-crossing logic between rsp_demux_005.src1 and rsp_mux_001.sink5
+Info: addr: Starting RTL generation for module 'NIOSsoc_addr'
+Info: addr:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_addr --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0063_addr_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0063_addr_gen//NIOSsoc_addr_component_configuration.pl  --do_build_sim=0  ]
+Info: addr: Done RTL generation for module 'NIOSsoc_addr'
+Info: addr: "NIOSsoc" instantiated altera_avalon_pio "addr"
 Info: block0: Starting RTL generation for module 'NIOSsoc_block0'
-Info: block0:   Generation command is [exec /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_block0 --dir=/tmp/alt9316_3803732827811933401.dir/0002_block0_gen/ --quartus_dir=/home/frank/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9316_3803732827811933401.dir/0002_block0_gen//NIOSsoc_block0_component_configuration.pl  --do_build_sim=0  ]
+Info: block0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_block0 --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0064_block0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0064_block0_gen//NIOSsoc_block0_component_configuration.pl  --do_build_sim=0  ]
 Info: block0: Done RTL generation for module 'NIOSsoc_block0'
 Info: block0: "NIOSsoc" instantiated altera_avalon_pio "block0"
 Info: busy: Starting RTL generation for module 'NIOSsoc_busy'
-Info: busy:   Generation command is [exec /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_busy --dir=/tmp/alt9316_3803732827811933401.dir/0003_busy_gen/ --quartus_dir=/home/frank/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9316_3803732827811933401.dir/0003_busy_gen//NIOSsoc_busy_component_configuration.pl  --do_build_sim=0  ]
+Info: busy:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_busy --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0065_busy_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0065_busy_gen//NIOSsoc_busy_component_configuration.pl  --do_build_sim=0  ]
 Info: busy: Done RTL generation for module 'NIOSsoc_busy'
 Info: busy: "NIOSsoc" instantiated altera_avalon_pio "busy"
 Info: ende: Starting RTL generation for module 'NIOSsoc_ende'
-Info: ende:   Generation command is [exec /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_ende --dir=/tmp/alt9316_3803732827811933401.dir/0004_ende_gen/ --quartus_dir=/home/frank/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9316_3803732827811933401.dir/0004_ende_gen//NIOSsoc_ende_component_configuration.pl  --do_build_sim=0  ]
+Info: ende:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_ende --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0066_ende_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0066_ende_gen//NIOSsoc_ende_component_configuration.pl  --do_build_sim=0  ]
 Info: ende: Done RTL generation for module 'NIOSsoc_ende'
 Info: ende: "NIOSsoc" instantiated altera_avalon_pio "ende"
 Info: jtag_uart_0: Starting RTL generation for module 'NIOSsoc_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=NIOSsoc_jtag_uart_0 --dir=/tmp/alt9316_3803732827811933401.dir/0005_jtag_uart_0_gen/ --quartus_dir=/home/frank/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9316_3803732827811933401.dir/0005_jtag_uart_0_gen//NIOSsoc_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=NIOSsoc_jtag_uart_0 --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0067_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0067_jtag_uart_0_gen//NIOSsoc_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'NIOSsoc_jtag_uart_0'
 Info: jtag_uart_0: "NIOSsoc" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "NIOSsoc" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'NIOSsoc_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=NIOSsoc_onchip_memory2_0 --dir=/tmp/alt9316_3803732827811933401.dir/0006_onchip_memory2_0_gen/ --quartus_dir=/home/frank/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9316_3803732827811933401.dir/0006_onchip_memory2_0_gen//NIOSsoc_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=NIOSsoc_onchip_memory2_0 --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0068_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0068_onchip_memory2_0_gen//NIOSsoc_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'NIOSsoc_onchip_memory2_0'
 Info: onchip_memory2_0: "NIOSsoc" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: out0: Starting RTL generation for module 'NIOSsoc_out0'
-Info: out0:   Generation command is [exec /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_out0 --dir=/tmp/alt9316_3803732827811933401.dir/0007_out0_gen/ --quartus_dir=/home/frank/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9316_3803732827811933401.dir/0007_out0_gen//NIOSsoc_out0_component_configuration.pl  --do_build_sim=0  ]
+Info: out0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=NIOSsoc_out0 --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0069_out0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0069_out0_gen//NIOSsoc_out0_component_configuration.pl  --do_build_sim=0  ]
 Info: out0: Done RTL generation for module 'NIOSsoc_out0'
 Info: out0: "NIOSsoc" instantiated altera_avalon_pio "out0"
 Info: sdram: Starting RTL generation for module 'NIOSsoc_sdram'
-Info: sdram:   Generation command is [exec /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/frank/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=NIOSsoc_sdram --dir=/tmp/alt9316_3803732827811933401.dir/0008_sdram_gen/ --quartus_dir=/home/frank/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9316_3803732827811933401.dir/0008_sdram_gen//NIOSsoc_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=NIOSsoc_sdram --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0070_sdram_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0070_sdram_gen//NIOSsoc_sdram_component_configuration.pl  --do_build_sim=0  ]
 Info: sdram: Done RTL generation for module 'NIOSsoc_sdram'
 Info: sdram: "NIOSsoc" instantiated altera_avalon_new_sdram_controller "sdram"
 Info: sdram_pll: "NIOSsoc" instantiated altpll "sdram_pll"
@@ -185,23 +193,24 @@ Info: avalon_st_adapter_018: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_019: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_020: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_021: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_022: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "NIOSsoc" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "NIOSsoc" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "NIOSsoc" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'NIOSsoc_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec /home/frank/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/frank/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/frank/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/frank/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=NIOSsoc_nios2_gen2_0_cpu --dir=/tmp/alt9316_3803732827811933401.dir/0014_cpu_gen/ --quartus_bindir=/home/frank/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt9316_3803732827811933401.dir/0014_cpu_gen//NIOSsoc_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2022.11.20 15:33:54 (*) Starting Nios II generation
-Info: cpu: # 2022.11.20 15:33:54 (*)   Checking for plaintext license.
-Info: cpu: # 2022.11.20 15:33:55 (*)   Couldn't query license setup in Quartus directory /home/frank/intelFPGA_lite/18.1/quartus/linux64/
-Info: cpu: # 2022.11.20 15:33:55 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2022.11.20 15:33:55 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2022.11.20 15:33:55 (*)   Plaintext license not found.
-Info: cpu: # 2022.11.20 15:33:55 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2022.11.20 15:33:55 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2022.11.20 15:33:55 (*)   Creating all objects for CPU
-Info: cpu: # 2022.11.20 15:33:55 (*)   Generating RTL from CPU objects
-Info: cpu: # 2022.11.20 15:33:55 (*)   Creating plain-text RTL
-Info: cpu: # 2022.11.20 15:33:56 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=NIOSsoc_nios2_gen2_0_cpu --dir=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0076_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/user/AppData/Local/Temp/alt9327_5515136608837646107.dir/0076_cpu_gen//NIOSsoc_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2022.11.30 23:06:18 (*) Starting Nios II generation
+Info: cpu: # 2022.11.30 23:06:18 (*)   Checking for plaintext license.
+Info: cpu: # 2022.11.30 23:06:19 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2022.11.30 23:06:19 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2022.11.30 23:06:19 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2022.11.30 23:06:19 (*)   Plaintext license not found.
+Info: cpu: # 2022.11.30 23:06:19 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2022.11.30 23:06:19 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2022.11.30 23:06:19 (*)   Creating all objects for CPU
+Info: cpu: # 2022.11.30 23:06:20 (*)   Generating RTL from CPU objects
+Info: cpu: # 2022.11.30 23:06:20 (*)   Creating plain-text RTL
+Info: cpu: # 2022.11.30 23:06:21 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'NIOSsoc_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -217,16 +226,16 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/frank/hackermans/s2vFish/src/NIOSsoc/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/user/Documents/Quartus/s2vFish/src/NIOSsoc/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: sdram_s1_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "sdram_s1_rsp_width_adapter"
-Info: Reusing file /home/frank/hackermans/s2vFish/src/NIOSsoc/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file /home/frank/hackermans/s2vFish/src/NIOSsoc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/user/Documents/Quartus/s2vFish/src/NIOSsoc/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/user/Documents/Quartus/s2vFish/src/NIOSsoc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
-Info: Reusing file /home/frank/hackermans/s2vFish/src/NIOSsoc/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/user/Documents/Quartus/s2vFish/src/NIOSsoc/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: avalon_st_adapter_005: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_005"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_005" instantiated error_adapter "error_adapter_0"
-Info: NIOSsoc: Done "NIOSsoc" with 34 modules, 59 files
+Info: NIOSsoc: Done "NIOSsoc" with 35 modules, 60 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

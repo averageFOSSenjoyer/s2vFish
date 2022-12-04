@@ -1,5 +1,6 @@
 	component NIOSsoc is
 		port (
+			addr_export      : out   std_logic_vector(7 downto 0);                     -- export
 			block0_export    : out   std_logic_vector(31 downto 0);                    -- export
 			block1_export    : out   std_logic_vector(31 downto 0);                    -- export
 			block2_export    : out   std_logic_vector(31 downto 0);                    -- export

@@ -17,6 +17,7 @@ module testbench();
     logic [127:0] block, key;
     logic Start, Reset, EnDe;
     logic [127:0] o;
+	 logic [7:0] addr;
     logic busy;
 
     datapath d0 (.*);
@@ -48,6 +49,7 @@ module testbench();
             #2  Start = 0;
                 block = 128'hx;
                 key = 128'hx;
+					 addr = 8'h0;
 
             #45 block = o;
                 EnDe = 1;

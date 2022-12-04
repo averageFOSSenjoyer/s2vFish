@@ -1,5 +1,5 @@
 Flow report for s2vFish
-Sun Nov 20 18:47:19 2022
+Sun Dec 04 16:08:13 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Nov 20 18:47:19 2022       ;
+; Flow Status                        ; Successful - Sun Dec 04 16:08:13 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; s2vFish                                     ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 7,621 / 49,760 ( 15 % )                     ;
-;     Total combinational functions  ; 6,856 / 49,760 ( 14 % )                     ;
-;     Dedicated logic registers      ; 3,079 / 49,760 ( 6 % )                      ;
-; Total registers                    ; 3148                                        ;
+; Total logic elements               ; 7,692 / 49,760 ( 15 % )                     ;
+;     Total combinational functions  ; 6,917 / 49,760 ( 14 % )                     ;
+;     Dedicated logic registers      ; 3,109 / 49,760 ( 6 % )                      ;
+; Total registers                    ; 3178                                        ;
 ; Total pins                         ; 40 / 360 ( 11 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 11,392 / 1,677,312 ( < 1 % )                ;
+; Total memory bits                  ; 44,160 / 1,677,312 ( 3 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/20/2022 18:46:01 ;
+; Start date & time ; 12/04/2022 16:05:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; s2vFish             ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+-----------------------------------------------------------+---------------+-------------------+----------------+
 ; Assignment Name                      ; Value                                                     ; Default Value ; Entity Name       ; Section Id     ;
 +--------------------------------------+-----------------------------------------------------------+---------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 59603933533008.166899156165174                            ; --            ; --                ; --             ;
+; COMPILER_SIGNATURE_ID                ; 92384137428240.167019151919012                            ; --            ; --                ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                        ; --            ; --                ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                 ; --            ; --                ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                                         ; --            ; --                ; eda_simulation ;
@@ -92,6 +92,8 @@ refer to the applicable agreement for further details.
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                                         ; --            ; --                ; --             ;
 ; MISC_FILE                            ; NIOSsoc/synthesis/../NIOSsoc.cmp                          ; --            ; --                ; --             ;
 ; MISC_FILE                            ; NIOSsoc/synthesis/../../NIOSsoc.qsys                      ; --            ; --                ; --             ;
+; MISC_FILE                            ; ram_bb.v                                                  ; --            ; --                ; --             ;
+; MISC_FILE                            ; ram2_bb.v                                                 ; --            ; --                ; --             ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                         ; --            ; --                ; --             ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                         ; --            ; --                ; --             ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                ; --            ; --                ; --             ;
@@ -107,7 +109,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                                              ; --            ; --                ; --             ;
 ; SLD_FILE                             ; NIOSsoc/synthesis/NIOSsoc.regmap                          ; --            ; --                ; --             ;
 ; SLD_FILE                             ; NIOSsoc/synthesis/NIOSsoc.debuginfo                       ; --            ; --                ; --             ;
-; SLD_INFO                             ; QSYS_NAME NIOSsoc HAS_SOPCINFO 1 GENERATION_ID 1668991037 ; --            ; NIOSsoc           ; --             ;
+; SLD_INFO                             ; QSYS_NAME NIOSsoc HAS_SOPCINFO 1 GENERATION_ID 1670191409 ; --            ; NIOSsoc           ; --             ;
 ; SOPCINFO_FILE                        ; NIOSsoc/synthesis/../../NIOSsoc.sopcinfo                  ; --            ; --                ; --             ;
 ; SYNTHESIS_ONLY_QIP                   ; On                                                        ; --            ; --                ; --             ;
 ; TOP_LEVEL_ENTITY                     ; top                                                       ; s2vFish       ; --                ; --             ;
@@ -119,12 +121,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:30     ; 1.0                     ; 1256 MB             ; 00:00:49                           ;
-; Fitter               ; 00:00:35     ; 1.5                     ; 2041 MB             ; 00:01:16                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 837 MB              ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:04     ; 2.8                     ; 1024 MB             ; 00:00:10                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1172 MB             ; 00:00:02                           ;
-; Total                ; 00:01:13     ; --                      ; --                  ; 00:02:19                           ;
+; Analysis & Synthesis ; 00:01:18     ; 1.0                     ; 5118 MB             ; 00:01:14                           ;
+; Fitter               ; 00:01:05     ; 1.9                     ; 6815 MB             ; 00:01:29                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4718 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:08     ; 3.9                     ; 5062 MB             ; 00:00:22                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4764 MB             ; 00:00:04                           ;
+; Total                ; 00:02:40     ; --                      ; --                  ; 00:03:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -133,11 +135,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
-; Fitter               ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
-; Assembler            ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
-; Timing Analyzer      ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
-; EDA Netlist Writer   ; archdesktop      ; Arch Linux ; Arch Linux ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-7AMP6S1  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-7AMP6S1  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-7AMP6S1  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-7AMP6S1  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-7AMP6S1  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
