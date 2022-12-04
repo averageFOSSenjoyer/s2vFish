@@ -6,7 +6,7 @@ module top(
     output logic DRAM_CAS_N, DRAM_CKE, DRAM_CS_N, DRAM_LDQM, DRAM_UDQM, DRAM_RAS_N, DRAM_WE_N, DRAM_CLK
 );
 
-    logic [127:0] block, key, o;
+    logic [127:0] block, key, o, out;
 	 logic [31:0] block0_export, block1_export, block2_export, block3_export, key0_export, key1_export, key2_export, key3_export;
     logic Start, EnDe, Reset, busy;
 	 logic [7:0] addr;
@@ -46,6 +46,7 @@ module top(
         .sdram_wire_we_n(DRAM_WE_N)
     );
 
-    datapath u_datapath (.block, .key, .Clk(MAX10_CLK1_50), .Start(Start), .Reset(Reset), .EnDe, .addr, .o, .busy);
+    datapath u_datapath (.block, .key, .Clk(MAX10_CLK1_50), .Start(Start), .Reset(Reset), .EnDe, .o(out), .busy);
 
+	 ram2 o_ram (.data(out), .wraddress(addr), .wren(~busy), .rdaddress(addr), .clock(Clk), .q(o));
 endmodule
